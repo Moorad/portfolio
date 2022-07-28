@@ -1,0 +1,87 @@
+@use 'variables' as v;
+
+body, html {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: v.$main-font;
+}
+
+// Every page will have a background <div>
+// Used to render the stars and radial gradient
+
+.background {
+	height: 100vh;
+	position: fixed;
+	background-color: #121A1E;
+	z-index: -10;
+	top:0;
+}
+
+@keyframes nav-scroll {
+	from {background: none;}
+	to {
+		background-color: rgba(18, 26, 30, 0.3);
+		backdrop-filter: blur(8px);
+	}
+}
+
+.nav-bar {
+	position: fixed;
+	margin: 0;
+	width: 100%;
+	height: v.$nav-height;
+	top:0;
+	right: 0;
+	z-index: 100;
+	
+	.nav-item {
+		display: block;
+		float: right;
+		margin: v.$nav-item-margin;
+		padding: v.$nav-item-size;
+		border-radius: 0.25rem;
+	
+		&:hover {
+			background-color: v.$main-color;
+		}
+	}
+
+	.brand {
+		display: block;
+		float:left;
+		margin: v.$nav-item-margin;	
+		font-weight: 900;
+		font-size: 1.5rem;
+	}
+
+	a {
+		color: white;
+	}
+
+	i {
+		margin-left: 8px;
+	}
+
+}
+
+.nav-bar-scroll {
+	animation-name: nav-scroll;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+
+
+// Whitespace spans
+span {
+	&.whitespace-sm {
+		margin-left: 8px;
+	}
+} 
+
+// Button types
+
+.outline-primary {
+	border: 2px solid v.$main-color;
+	background-color: rgba(v.$main-color, 0.3);
+}

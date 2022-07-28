@@ -1,83 +1,95 @@
-$main-color: #3E5FE7;
-$main-font: Lato, Arial, Helvetica, sans-serif;
-
-body, html {
-	margin: 0;
-	padding: 0;
-	color: white;
-	font-family: $main-font;
-}
+@use 'variables' as v;
+@use 'base';
 
 .background {
-	height: 100vh;
-	position: fixed;
-	background-color: #121A1E;
 	background: radial-gradient(at top,#1A344B 0%, #1E1E2C 75%);
-	z-index: -10;
-	top:0;
-}
-
-
-$nav-height: 4rem;
-$nav-item-margin: 15px 10px;
-$nav-item-size: 0.5em 0.8em;
-
-@keyframes nav-scroll {
-	from {background: none;}
-	to {
-		background-color: rgba(18, 26, 30, 0.3);
-		backdrop-filter: blur(8px);
-	}
-}
-
-.nav-bar {
-	margin: 0;
-	width: 100%;
-	position: fixed;
-	height: $nav-height;
-	top:0;
-	right: 0;
-	
-	
-	.nav-item {
-		display: block;
-		float: right;
-		margin: $nav-item-margin;
-		padding: $nav-item-size;
-		border-radius: 0.25rem;
-	}
-
-	.bordered {
-		border: 2px solid $main-color;
-		background-color: rgba($main-color, 0.3);
-	}
-
-	.nav-item:hover {
-		background-color: $main-color;
-	}
-
-	.brand {
-		display: block;
-		float:left;
-		margin: $nav-item-margin;
-		// padding$nav-item-size;
-		// color: $main-color;
-		font-weight: 900;
-		font-size: 1.5rem;
-	}
-
-	a {
-		color: white;
-	}
-
-}
-
-.nav-bar-scroll {
-	animation-name: nav-scroll;
-	animation-duration: 0.5s;
-	animation-fill-mode: both;
 }
 
 .main-section {
-	margin-top: $nav-height;
+	margin-top: v.$nav-height;
+	height: calc(100vh - 4em);
+
+	.main-image {
+		position: absolute;
+		top: 8em;
+		right: 6em; 
+		width: 42%;
+	}
+
+	.text-container {
+		position: absolute;
+		top: 35%;
+		left: 5em;
+		font-weight: 900;
+
+		.main-text {
+			font-size: 4.5em;
+		}
+
+		.secondary-text {
+			font-size: 2.6em;
+			background-color: v.$main-color;
+			width: auto;
+			padding: 0.1em 0.25em;
+			border-radius: 0.5rem;
+			box-shadow: 0px 0px 50px rgba(v.$main-color, 0.7);
+		}
+	}
+
+	
+}
+
+section {
+	padding: 4em;
+
+	h1 {
+		font-size: 3em;
+	}
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: 20em;
+		border-radius: 50%;
+	}
+
+	p {
+		margin-right:4em;
+	}
+}
+
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	
+	.grid-item {
+		text-align: center;
+		padding: 3em;
+		border: 2px solid v.$main-color;
+		margin: 10px;
+		border-radius: 0.35em;
+		position: relative;
+
+		.icon {
+			font-size: 10em;
+		}
+
+		
+		.skill-text {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			white-space: nowrap;
+		}
+	}
+
+	.grid-item:hover {
+		background-color: v.$main-color;
+	}
 }

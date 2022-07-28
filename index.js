@@ -9,9 +9,12 @@ const MIN_STAR_SIZE = 1
 const MAX_STAR_SIZE = 3
 const MAX_OFFSET = 80
 const MIN_OFFSET = 0
-const GAP = 160
+const GAP = 120
+const moveMultiplier = 0.05;
 
 let stars = [];
+let mouseX = 0;
+let mouseY = 0;
 
 class Star {
 	constructor(x, y) {
@@ -31,9 +34,12 @@ class Star {
 	}
 
 	draw() {
+		let newX = this.x + ((-1) * (mouseX - (window.innerWidth / 2))) * moveMultiplier;
+		let newY = this.y + ((-1) * (mouseY - (window.innerHeight / 2))) * moveMultiplier;
+
 		ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
 		ctx.beginPath();
-		ctx.arc(this.x, this.y, this.size, 0, Math.PI *  2, false);
+		ctx.arc(newX, newY, this.size, 0, Math.PI *  2, false);
 		ctx.fill();
 	}
 }
@@ -47,6 +53,7 @@ function load() {
 }
 
 function draw() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	stars.forEach(s => {
 		s.draw();
 	});
@@ -66,9 +73,6 @@ function drawStar(x, y) {
 	ctx.beginPath();
 	ctx.arc(x, y, size, 0, Math.PI *  2, false);
 	ctx.fill();
-
-	console.log('size: ' + size);
-	console.log('offset dir and mag: ' + offsetxDirection + ', ' + offsetyDirection + ', ' + offsetMagnitude);
 }
 
 window.addEventListener('scroll', (e) => {
@@ -77,7 +81,16 @@ window.addEventListener('scroll', (e) => {
 	} else {
 		navBar.className = 'nav-bar';
 	}
-})
+});
+
+window.addEventListener('mousemove', (e) => {
+	mouseX = e.clientX;
+	mouseY = e.clientY;
+});
 
 load();
-draw();
+
+// draw();
+setInterval(() => {
+	draw();
+}, (1000 / 60));

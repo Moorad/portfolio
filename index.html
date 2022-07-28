@@ -1,32 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/e960eea922.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="css/index.css">
 	<title>Moorad's website</title>
 </head>
+
 <body>
 	<ul class="nav-bar">
 		<li class="brand">Mo.</li>
-		<a href="google.com"><li class="nav-item bordered">Github</li></a>
-		<a href="google.com"><li class="nav-item">CV</li></a>
-		<a href="google.com"><li class="nav-item">Projects</li></a>
-		<a href="google.com"><li class="nav-item">Home</li></a>
+		<a href="https://github.com/Moorad">
+			<li class="nav-item outline-primary"><i class="fa-brands fa-github fa-lg"></i><span class="whitespace-sm"></span>Github</li>
+		</a>
+		<a href="/contact.html">
+			<li class="nav-item"><i class="fa-solid fa-server"></i></i><span class="whitespace-sm"></span>Home Server</li>
+		</a>
+		<a href="/home_server.html">
+			<li class="nav-item"><i class="fa-solid fa-server"></i></i><span class="whitespace-sm"></span>Home Server</li>
+		</a>
+		<a href="/cv.html">
+			<li class="nav-item"><i class="fa-solid fa-file"></i><span class="whitespace-sm"></span>CV</li>
+		</a>
+		<a href="/projects.html">
+			<li class="nav-item"><i class="fa-solid fa-pen-ruler"></i><span class="whitespace-sm"></span>Projects</li>
+		</a>
+		<a href="/">
+			<li class="nav-item"><i class="fa-solid fa-house"></i><span class="whitespace-sm"></span>Home</li>
+		</a>
 	</ul>
 	<div class="background">
 		<canvas id="canvas"></canvas>
 	</div>
 	<section class="main-section">
-		<!-- <img src="images/programming.svg"> -->
+		<img class="main-image" src="images/programming.svg">
+		<div class="text-container">
+			<div class="main-text">Moorad Altamimi</div>
+			<span class="secondary-text">Web Developer</span>
+		</div>
+	</section>
+	<section class="about-section">
+		<h1>Who am I</h1>
+		<div class="container">
+			<p class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam hic at dicta placeat nemo, recusandae consequuntur voluptatum dignissimos. Delectus, vel eveniet. Dolores itaque nulla similique earum esse sed molestiae illo!. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam perferendis provident corporis magnam architecto ad incidunt a accusantium, minima quibusdam voluptates, nobis dolorum? Excepturi autem magnam ea ad quaerat animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto placeat, sed illo optio similique ex fuga neque, eligendi accusamus ea repellendus, aperiam quis impedit. Reiciendis minus a consectetur aut incidunt?</p>
+			<img src="images/pfp.webp" class="container-img" />
 
-		a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>
-		
+		</div>
+	</section>
+
+	<section class="skill-section">
+		<h1>Skillset</h1>
+		<div class="grid-container">
+			<div class="grid-item">
+				<i class="fa-brands fa-html5 fa-3x"></i>
+				<div class="skill-text">HTML</div>
+			</div>
+			<div class="grid-item">
+				<i class="fa-brands fa-css3 fa-3x"></i>
+				<div class="skill-text">CSS</div>
+			</div>
+			<div class="grid-item">
+				<i class="fa-brands fa-js fa-3x"></i>
+				<div class="skill-text">JavaScript / TypeScript</div>	
+			</div>
+			<div class="grid-item">
+				<i class="fa-brands fa-node fa-3x"></i>
+				<div class="skill-text">Node.js</div>	
+			</div>
+			<div class="grid-item">
+				<i class="fa-brands fa-react fa-3x"></i>
+				<div class="skill-text">React</div>
+			</div>
+			<div class="grid-item">
+				<i class="fa-brands fa-python fa-3x"></i>
+				<div class="skill-text">Python</div>
+			</div>
+			<div class="grid-item">
+				<i class="fa-brands fa-java fa-3x"></i>
+				<div class="skill-text">Java</div>
+			</div>
+			<div class="grid-item">
+				<i class="fa-solid fa-c fa-3x"></i>
+				<div class="skill-text">C / C++</div>
+			</div>
+			<div class="grid-item">
+				<i class="fa-solid fa-database fa-3x"></i>
+				<div class="skill-text">MongoDB & MySQL</div>
+			</div>
+		</div>
 	</section>
 	<script src="./index.js"></script>
 </body>
+
 </html>
