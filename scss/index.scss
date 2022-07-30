@@ -6,7 +6,6 @@
 }
 
 .main-section {
-	margin-top: v.$nav-height;
 	height: calc(100vh - 4em);
 
 	.main-image {
@@ -36,16 +35,14 @@
 		}
 	}
 
-	
-}
-
-section {
-	padding: 4em;
-
-	h1 {
-		font-size: 3em;
+	.down-icon {
+		position: absolute;
+		bottom: 70px;
+		right: 50%;
+		transform: translate(50%, 0);
 	}
-}
+	
+}	
 
 .container {
 	display: flex;

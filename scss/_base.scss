@@ -45,6 +45,10 @@ body, html {
 		&:hover {
 			background-color: v.$main-color;
 		}
+
+		&.active {
+			background-color: v.$main-color;
+		}
 	}
 
 	.brand {
@@ -71,6 +75,34 @@ body, html {
 	animation-fill-mode: both;
 }
 
+footer {
+	display: flex;
+	height: v.$nav-height;
+	background-color: rgba(18, 26, 30, 0.3);
+	backdrop-filter: blur(8px);
+	justify-content: center;
+}
+
+section {
+	padding: 4em;
+
+	&:first-of-type {
+		margin-top: v.$nav-height;
+		padding: 0;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+}
+
+.section-seperator {
+	background-color: white;
+	height: 2px;
+	width: 10%;
+	margin: auto;
+	border-radius: 2rem;
+}
 
 // Whitespace spans
 span {
@@ -80,6 +112,23 @@ span {
 } 
 
 // Button types
+
+// default
+button {
+	border-radius: 0.25rem;
+	margin: v.$nav-item-margin;
+	padding: v.$nav-item-size;
+	color: white;
+	background: none;
+	border: none;
+	font-family: v.$main-font;
+	min-width: 5em;
+	
+	&:hover {
+		background-color: v.$main-color;
+	}
+}
+
 
 .outline-primary {
 	border: 2px solid v.$main-color;
