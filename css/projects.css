@@ -125,11 +125,56 @@ button:hover {
   background-color: #3E5FE7;
 }
 
+.primary {
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+}
+
 .outline-primary {
   border: 2px solid #3E5FE7;
   background-color: rgba(62, 95, 231, 0.3);
 }
 
+#construction {
+  background-image: repeating-linear-gradient(45deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4) 10px, rgba(243, 189, 33, 0.4) 10px, rgba(243, 189, 33, 0.4) 17.5px);
+  background-size: 50px 50px;
+  text-align: center;
+}
+
 .background {
   background: radial-gradient(at right, hsl(238deg, 49%, 20%) 0%, hsl(270deg, 19%, 15%) 75%);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2em;
+  padding: 2em;
+}
+.projects-container .projects-item {
+  border-radius: 1em;
+}
+.projects-container .projects-item .project-img {
+  border-radius: 1em;
+  width: 100%;
+}
+.projects-container .projects-item .project-name {
+  font-weight: 900;
+  font-size: 1.5em;
+  text-align: center;
+}
+.projects-container .projects-item .project-description {
+  text-align: center;
+}
+.projects-container .projects-item .project-buttons {
+  display: flex;
+  justify-content: center;
+}
+.projects-container .projects-item .project-langs {
+  display: flex;
+  justify-content: space-around;
+}
+.projects-container .projects-item .project-langs .lang {
+  padding: 0.8em;
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.2);
 }

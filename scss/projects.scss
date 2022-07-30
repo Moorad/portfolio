@@ -3,3 +3,46 @@
 .background {
 	background: radial-gradient(at right,hsl(238, 49%, 20%) 0%, hsl(270, 19%, 15%) 75%);
 }
+
+.projects-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 2em;
+	padding: 2em;
+	.projects-item {
+		border-radius: 1em;
+		// outline: 2px solid white;
+		
+		.project-img {
+			border-radius: 1em;
+			width:100%;
+		}
+
+		.project-name {
+			font-weight: 900;
+			font-size: 1.5em;
+			text-align: center;
+		}
+	
+		.project-description {
+			text-align: center;
+		}
+		
+		.project-buttons {
+			display: flex;
+			justify-content: center;
+		}
+
+		.project-langs {
+			display: flex;
+			justify-content:space-around;
+			
+			.lang {
+				padding: 0.8em;
+				border-radius: 0.5em;
+				background-color: rgba(#000, 0.2);
+			}
+		}
+
+	}
+}

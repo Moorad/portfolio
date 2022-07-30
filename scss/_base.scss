@@ -129,8 +129,26 @@ button {
 	}
 }
 
+.primary {
+	background: linear-gradient(45deg, #4e54c8, #8f94fb) ;
+}
 
 .outline-primary {
 	border: 2px solid v.$main-color;
 	background-color: rgba(v.$main-color, 0.3);
+}
+
+
+// remove later
+#construction {
+	background-image: repeating-linear-gradient(
+		45deg,
+		rgba(#121212, 0.4),
+		rgba(#121212, 0.4) 10px,
+		rgba(#f3bd21, 0.4) 10px,
+		rgba(#f3bd21, 0.4) 17.5px
+	  );
+
+	background-size: 50px 50px;
+	text-align: center;
 }
