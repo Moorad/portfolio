@@ -44,17 +44,26 @@ body, html {
   z-index: 100;
 }
 .nav-bar .nav-item {
+  position: relative;
   display: block;
   float: right;
   margin: 15px 10px;
-  padding: 0.5em 0.8em;
-  border-radius: 0.25rem;
+  padding: 0.5em 1.2em 0.5em 0.8em;
+  border-radius: 0.5rem;
 }
 .nav-bar .nav-item:hover {
-  background-color: #3E5FE7;
+  background-color: rgba(0, 0, 0, 0.2);
 }
-.nav-bar .nav-item.active {
+.nav-bar .nav-item.active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 80%;
+  right: 50%;
+  bottom: calc(50% - 25px);
+  transform: translate(50%, -50%);
   background-color: #3E5FE7;
+  border-radius: 6px;
 }
 .nav-bar .brand {
   display: block;
@@ -110,23 +119,31 @@ section h1 {
 span.whitespace-sm {
   margin-left: 8px;
 }
+span.whitespace-xs {
+  margin-left: 4px;
+}
 
 button {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   margin: 15px 10px;
-  padding: 0.5em 0.8em;
+  padding: 0.8em 1.2em;
+  border-radius: 0.5em;
   color: white;
   background: none;
   border: none;
   font-family: Lato, Arial, Helvetica, sans-serif;
   min-width: 5em;
 }
-button:hover {
-  background-color: #3E5FE7;
+button:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
 }
 
 .primary {
-  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  background: #3E5FE7;
 }
 
 .outline-primary {
@@ -191,8 +208,9 @@ button:hover {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .grid-container .grid-item {
   text-align: center;

@@ -36,18 +36,27 @@ body, html {
 	z-index: 100;
 	
 	.nav-item {
+		position: relative;
 		display: block;
 		float: right;
 		margin: v.$nav-item-margin;
 		padding: v.$nav-item-size;
-		border-radius: 0.25rem;
+		border-radius: 0.5rem;
 	
 		&:hover {
-			background-color: v.$main-color;
+			background-color: rgba(#000, 0.2);
 		}
 
-		&.active {
+		&.active::after {
+			content: '';
+			position: absolute;
+			height: 3px;
+			width: 80%;
+			right: 50%;
+			bottom: calc(50% - 25px);
+			transform: translate(50%, -50%);
 			background-color: v.$main-color;
+			border-radius: 6px;
 		}
 	}
 
@@ -57,6 +66,7 @@ body, html {
 		margin: v.$nav-item-margin;	
 		font-weight: 900;
 		font-size: 1.5rem;
+		
 	}
 
 	a {
@@ -109,28 +119,40 @@ span {
 	&.whitespace-sm {
 		margin-left: 8px;
 	}
+
+	&.whitespace-xs {
+		margin-left: 4px;
+	}
 } 
 
 // Button types
 
 // default
 button {
-	border-radius: 0.25rem;
+	border-radius: 0.5rem;
 	margin: v.$nav-item-margin;
-	padding: v.$nav-item-size;
+	// padding: v.$nav-item-size;
+	
+	padding: 0.8em 1.2em;
+	border-radius: 0.5em;
 	color: white;
 	background: none;
 	border: none;
 	font-family: v.$main-font;
 	min-width: 5em;
 	
-	&:hover {
-		background-color: v.$main-color;
+	&:hover:not(:disabled) {
+		background-color: rgba(#000, 0.2);
+		cursor: pointer;
+	}
+
+	&:disabled {
+		opacity: 0.5;
 	}
 }
 
 .primary {
-	background: linear-gradient(45deg, #4e54c8, #8f94fb) ;
+	background: v.$main-color ;
 }
 
 .outline-primary {

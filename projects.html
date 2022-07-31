@@ -10,31 +10,56 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/projects.css">
+	<link rel="stylesheet" href="css/icomoon.css">
 	<title>Moorad's website</title>
 </head>
 
 <body>
 	<ul class="nav-bar">
-		<li class="brand">Mo.</li>
+		<a href="/">
+			<li class="brand">Mo.</li>
+		</a>
 		<a href="https://github.com/Moorad">
 			<li class="nav-item outline-primary">
-				<i class="fa-brands fa-github fa-lg"></i><span class="whitespace-sm"></span>Github</li>
-			</div>
+				<i class="fa-brands fa-github fa-lg"></i>
+				<span class="whitespace-sm"></span>
+				Github
+			</li>
 		</a>
 		<a href="/contact.html">
-			<li class="nav-item"><i class="fa-solid fa-server"></i></i><span class="whitespace-sm"></span>Home Server</li>
+			<li class="nav-item">
+				<i class="fa-solid fa-envelope"></i>
+				<span class="whitespace-sm"></span>
+				Contact
+			</li>
 		</a>
 		<a href="/home_server.html">
-			<li class="nav-item"><i class="fa-solid fa-server"></i></i><span class="whitespace-sm"></span>Home Server</li>
+			<li class="nav-item">
+				<i class="fa-solid fa-server"></i>
+				<span class="whitespace-sm"></span>
+				Home Server
+			</li>
 		</a>
 		<a href="/cv.html">
-			<li class="nav-item"><i class="fa-solid fa-file"></i><span class="whitespace-sm"></span>CV</li>
+			<li class="nav-item">
+				<i class="fa-solid fa-file"></i>
+				<span class="whitespace-sm"></span>
+				CV
+			</li>
 		</a>
 		<a href="/projects.html">
-			<li class="nav-item"><i class="fa-solid fa-pen-ruler"></i><span class="whitespace-sm"></span>Projects</li>
+			<li class="nav-item active">
+				<i class="fa-solid fa-pen-ruler"></i>
+				<span class="whitespace-sm"></span>
+				Projects
+			</li>
 		</a>
 		<a href="/">
-			<li class="nav-item"><i class="fa-solid fa-house"></i><span class="whitespace-sm"></span>Home</li>
+			<li class="nav-item">
+				<i class="fa-solid fa-house"></i>
+				<span class="whitespace-sm"></span>
+				Home
+			</li>
 		</a>
 	</ul>
 
@@ -44,14 +69,26 @@
 			<div class="projects-item">
 				<img class='project-img' src='images/cifar10.png'>
 				<div class="project-name">
-					Portfolio (This site!)
+					Portfolio
 				</div>
 				<div class="project-description">
-					Simple cifar10 machine learning project
+					(This site!)
 				</div>
 				<div class="project-buttons">
-					<button class="primary">Visit</button>
-					<button class="primary">Repo</button>
+					<a href="https://moorad.dev/">
+						<button class="primary">
+							<i class="fa-solid fa-link"></i>
+							<span class="whitespace-xs"></span>
+							Visit
+						</button>
+					</a>
+					<a href="https://github.com/Moorad/portfolio">
+						<button class="primary">
+							<i class="fa-solid fa-code"></i>
+							<span class="whitespace-xs"></span>
+							Repo
+						</button>
+					</a>
 				</div>
 				<div class="project-langs">
 					<div class="lang">
@@ -76,8 +113,20 @@
 					A personal home server to remotely view and manage files and projects
 				</div>
 				<div class="project-buttons">
-					<button class="primary">Visit</button>
-					<button class="primary">Repo</button>
+					<a href="">
+						<button class="primary" disabled>
+							<i class="fa-solid fa-link"></i>
+							<span class="whitespace-xs"></span>
+							Visit
+						</button>
+					</a>
+					<a href="https://github.com/Moorad/portfolio">
+						<button class="primary">
+							<i class="fa-solid fa-code"></i>
+							<span class="whitespace-xs"></span>
+							Repo
+						</button>
+					</a>
 				</div>
 				<div class="project-langs">
 					<div class="lang">
@@ -93,7 +142,6 @@
 						<i class="fa-brands fa-bootstrap fa-lg"></i>
 					</div>
 				</div>
-
 			</div>
 
 			<div class="projects-item">
@@ -105,9 +153,27 @@
 					Simple cifar10 machine learning project
 				</div>
 				<div class="project-buttons">
-					<button class="primary">Visit</button>
-					<button class="primary">Repo</button>
-					<button class="primary">Colab</button>
+					<a href="">
+						<button class="primary" disabled>
+							<i class="fa-solid fa-link"></i>
+							<span class="whitespace-xs"></span>
+							Visit
+						</button>
+					</a>
+					<a href="https://github.com/Moorad/cifar10-ml">
+						<button class="primary">
+							<i class="fa-solid fa-code"></i>
+							<span class="whitespace-xs"></span>
+							Repo
+						</button>
+					</a>
+					<a href="https://colab.research.google.com/drive/1tCls8ue2ntO0xBTrRKmWcP4Bb-bkx7Ma?usp=sharing">
+						<button class="primary">
+							<i class="icon-googlecolab"></i>
+							<span class="whitespace-xs"></span>
+							Colab
+						</button>
+					</a>
 				</div>
 				<div class="project-langs">
 					<div class="lang">
@@ -117,7 +183,7 @@
 						<i class="fa-brands fa-html5 fa-lg"></i>
 					</div>
 					<div class="lang">
-						<i class="fa-brands fa-css3 fa-lg"></i>
+						<i class="icon-tensorflow fa-lg"></i>
 					</div>
 				</div>
 
