@@ -96,11 +96,6 @@ footer {
 section {
 	padding: 4em;
 
-	&:first-of-type {
-		margin-top: v.$nav-height;
-		padding: 0;
-	}
-
 	h1 {
 		font-size: 3em;
 	}
@@ -130,7 +125,6 @@ span {
 // default
 button {
 	border-radius: 0.5rem;
-	margin: v.$nav-item-margin;
 	// padding: v.$nav-item-size;
 	
 	padding: 0.8em 1.2em;

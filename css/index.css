@@ -100,10 +100,6 @@ footer {
 section {
   padding: 4em;
 }
-section:first-of-type {
-  margin-top: 4rem;
-  padding: 0;
-}
 section h1 {
   font-size: 3em;
 }
@@ -125,7 +121,6 @@ span.whitespace-xs {
 
 button {
   border-radius: 0.5rem;
-  margin: 15px 10px;
   padding: 0.8em 1.2em;
   border-radius: 0.5em;
   color: white;
@@ -180,12 +175,22 @@ button:disabled {
   font-size: 4.5em;
 }
 .main-section .text-container .secondary-text {
+  float: left;
+  clear: left;
   font-size: 2.6em;
   background-color: #3E5FE7;
-  width: auto;
-  padding: 0.1em 0.25em;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0px 50px rgba(62, 95, 231, 0.7);
+  padding: 0.3em 0.5em;
+  border-radius: 0.85rem;
+  box-shadow: 0px 0px 50px rgba(62, 95, 231, 0.5);
+}
+.main-section .text-container .ternary-text {
+  float: left;
+  clear: left;
+  font-size: 2em;
+  padding: 0.3em 0.5em;
+  border-radius: 0.85rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 0.3em;
 }
 .main-section .down-icon {
   position: absolute;

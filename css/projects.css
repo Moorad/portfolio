@@ -100,10 +100,6 @@ footer {
 section {
   padding: 4em;
 }
-section:first-of-type {
-  margin-top: 4rem;
-  padding: 0;
-}
 section h1 {
   font-size: 3em;
 }
@@ -125,7 +121,6 @@ span.whitespace-xs {
 
 button {
   border-radius: 0.5rem;
-  margin: 15px 10px;
   padding: 0.8em 1.2em;
   border-radius: 0.5em;
   color: white;
@@ -178,14 +173,18 @@ button:disabled {
   font-weight: 900;
   font-size: 1.5em;
   text-align: center;
+  margin: 15px 0;
 }
 .projects-container .projects-item .project-description {
   text-align: center;
+  margin: 15px 0;
 }
 .projects-container .projects-item .project-buttons {
+  margin: 15px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .projects-container .projects-item .project-langs {
   display: flex;
