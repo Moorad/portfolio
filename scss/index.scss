@@ -58,6 +58,19 @@
 	}	
 }
 
+@keyframes blink {
+	0%   { visibility: visible; }
+	47%  { visibility: visible; }
+	50%  { visibility: hidden; }
+	97%  { visibility: hidden; }
+	100% { visibility: visible; }
+}
+
+.cursor {
+	display: inline-block;
+	animation: blink 1.2s linear infinite;
+}
+
 .container {
 	display: flex;
 	align-items: center;

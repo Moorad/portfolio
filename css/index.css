@@ -146,6 +146,10 @@ button:disabled {
   background-color: rgba(62, 95, 231, 0.3);
 }
 
+.hidden {
+  display: none;
+}
+
 #construction {
   background-image: repeating-linear-gradient(45deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4) 10px, rgba(243, 189, 33, 0.4) 10px, rgba(243, 189, 33, 0.4) 17.5px);
   background-size: 50px 50px;
@@ -197,6 +201,47 @@ button:disabled {
   bottom: 70px;
   right: 50%;
   transform: translate(50%, 0);
+}
+
+@-webkit-keyframes blink {
+  0% {
+    visibility: visible;
+  }
+  47% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  97% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes blink {
+  0% {
+    visibility: visible;
+  }
+  47% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  97% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+.cursor {
+  display: inline-block;
+  -webkit-animation: blink 1.2s linear infinite;
+          animation: blink 1.2s linear infinite;
 }
 
 .container {

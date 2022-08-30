@@ -1,7 +1,6 @@
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 let navBar = document.getElementsByClassName('nav-bar')[0];
-let typingText = document.getElementById('typing-text');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -12,8 +11,6 @@ const MAX_OFFSET = 80
 const MIN_OFFSET = 0
 const GAP = 120
 const moveMultiplier = 0.05;
-const TYPING_SPEED = 200;
-const ERASING_SPEED = 200;
 
 let stars = [];
 let mouseX = 0;
@@ -48,51 +45,13 @@ class Star {
 }
 
 
-// Returns promise, promise resolved when text is finished
-function typeText(text) {
 
-	return new Promise((resolve, reject) => {
-		
-		let currIndex = 0;
-		let typingInterval = setInterval(() => {
-			typingText.innerHTML = text.slice(0, currIndex);
-			currIndex ++;
-
-			if (currIndex > text.length) {
-				
-				clearInterval(typingInterval);
-				let eraseInterval = setInterval(() => {
-					typingText.innerHTML = text.slice(0, currIndex);
-					currIndex --;
-					
-					if (currIndex < 0) {
-						clearInterval(eraseInterval);
-						resolve();
-					}
-				}, ERASING_SPEED);
-			}
-		}, TYPING_SPEED);
-	});
-}
-
-async function loadTypeText() {
-	let sentences = ['test text', 'another test text'];
-	let currSentence = 0;
-	while (true) {
-		await typeText(sentences[currSentence % sentences.length])
-		currSentence ++;
-	}
-}
 
 function load() {
 	for (let i = 0; i < (canvas.height / GAP); i++) {
 		for (let j = 0; j < (canvas.width / GAP); j++) {
 			stars.push(new Star(GAP * j, GAP * i));
 		}
-	}	
-
-	if (typingText) {
-		loadTypeText();
 	}
 }
 

@@ -77,156 +77,12 @@
 
 	<section>
 		<h1>Projects</h1>
+		<div class="project-filter">
+			<div>Filter:</div>
+			<div id="filter-list"></div>
+		</div>
 		<div class="projects-container">
-			<div class="projects-item">
-				<img class='project-img' src='images/cifar10.png'>
-				<div class="project-name">
-					Portfolio
-				</div>
-				<div class="project-description">
-					(This site!)
-				</div>
-				<div class="project-buttons">
-					<a href="https://moorad.dev/">
-						<button class="primary">
-							<i class="fa-solid fa-link"></i>
-							<span class="whitespace-xs"></span>
-							Visit
-						</button>
-					</a>
-					<a href="https://github.com/Moorad/portfolio">
-						<button class="primary">
-							<i class="fa-solid fa-code"></i>
-							<span class="whitespace-xs"></span>
-							Repo
-						</button>
-					</a>
-				</div>
-				<div class="project-langs">
-					<div class="lang">
-						<i class="fa-brands fa-html5 fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-sass fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-js fa-lg"></i>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="projects-item">
-				<img class='project-img' src='images/home_server.png'>
-				<div class="project-name">
-					Home Server
-				</div>
-				<div class="project-description">
-					A personal home server to remotely view and manage files and projects
-				</div>
-				<div class="project-buttons">
-					<a href="">
-						<button class="primary" disabled>
-							<i class="fa-solid fa-link"></i>
-							<span class="whitespace-xs"></span>
-							Visit
-						</button>
-					</a>
-					<a href="https://github.com/Moorad/portfolio">
-						<button class="primary">
-							<i class="fa-solid fa-code"></i>
-							<span class="whitespace-xs"></span>
-							Repo
-						</button>
-					</a>
-				</div>
-				<div class="project-langs">
-					<div class="lang">
-						<i class="fa-brands fa-node fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-js fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-react fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-bootstrap fa-lg"></i>
-					</div>
-				</div>
-			</div>
-
-			<div class="projects-item">
-				<img class='project-img' src='images/cifar10.png'>
-				<div class="project-name">
-					Cifar10 ML
-				</div>
-				<div class="project-description">
-					Simple cifar10 machine learning project
-				</div>
-				<div class="project-buttons">
-					<a href="">
-						<button class="primary" disabled>
-							<i class="fa-solid fa-link"></i>
-							<span class="whitespace-xs"></span>
-							Visit
-						</button>
-					</a>
-					<a href="https://github.com/Moorad/cifar10-ml">
-						<button class="primary">
-							<i class="fa-solid fa-code"></i>
-							<span class="whitespace-xs"></span>
-							Repo
-						</button>
-					</a>
-					<a href="https://colab.research.google.com/drive/1tCls8ue2ntO0xBTrRKmWcP4Bb-bkx7Ma?usp=sharing">
-						<button class="primary">
-							<i class="icon-googlecolab"></i>
-							<span class="whitespace-xs"></span>
-							Colab
-						</button>
-					</a>
-				</div>
-				<div class="project-langs">
-					<div class="lang">
-						<i class="fa-brands fa-python fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-html5 fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="icon-tensorflow fa-lg"></i>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="projects-item">
-				<img class='project-img' src='images/cifar10.png'>
-				<div class="project-name">
-					Cifar10 ML
-				</div>
-				<div class="project-description">
-					Simple cifar10 machine learning project
-				</div>
-				<div class="project-buttons">
-					<button class="primary">Visit</button>
-					<button class="primary">Repo</button>
-					<button class="primary">Colab</button>
-				</div>
-				<div class="project-langs">
-					<div class="lang">
-						<i class="fa-brands fa-python fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-html5 fa-lg"></i>
-					</div>
-					<div class="lang">
-						<i class="fa-brands fa-css3 fa-lg"></i>
-					</div>
-				</div>
-
-			</div>
+			<!-- This gets filled by project.js -->
 		</div>
 	</section>
 
@@ -250,7 +106,8 @@
 		This website is under heavy construction.
 	</div>
 
-	<script src="./index.js"></script>
+	<script src="./javascript/base.js"></script>
+	<script src="./javascript/projects.js"></script>
 </body>
 
 </html>
