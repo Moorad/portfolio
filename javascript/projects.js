@@ -1,7 +1,7 @@
 const projects = [{
 		'name': 'Portfolio',
 		'description': '(This site!)',
-		'preview_img': 'images/cifar10.png',
+		'preview_img': 'images/portfolio.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-link',
 			'text': 'Visit',
@@ -17,6 +17,9 @@ const projects = [{
 			'HTML',
 			'Sass',
 			'JavaScript'
+		],
+		'tags': [
+			'UI'
 		]
 	},
 	{
@@ -35,10 +38,12 @@ const projects = [{
 			'isDisabled': false
 		}],
 		'technologies': [
-			'Node',
+			'Node.js',
 			'JavaScript',
 			'React',
 			'Bootstrap'
+		],
+		'tags': [
 		]
 	},
 	{
@@ -65,6 +70,8 @@ const projects = [{
 			'HTML',
 			'Python',
 			'Tensorflow',
+		],
+		'tags': [
 		]
 	}
 ];
@@ -73,8 +80,8 @@ const TECH_ICONS = {
 	'HTML': 'fa-brands fa-html5',
 	'CSS': 'fa-brands fa-css3',
 	'JavaScript': 'fa-brands fa-js',
-	'Node': 'fa-brands fa-node',
-	'TypeScript': 'icons-typscript',
+	'Node.js': 'fa-brands fa-node',
+	'TypeScript': 'icon-typescript',
 	'React': 'fa-brands fa-react',
 	'Python': 'fa-brands fa-python',
 	'Java': 'fa-brands fa-java',
@@ -112,6 +119,10 @@ function render() {
 		projectName.className = 'project-name';
 		projectName.innerText = project.name;
 
+		let projectDescription = document.createElement('div');
+		projectDescription.className = 'project-description';
+		projectDescription.innerText = project.description;
+
 		let buttonContainer = document.createElement('div');
 		buttonContainer.className = 'project-buttons';
 		for (let i = 0; i < project.buttons.length; i++) {
@@ -141,6 +152,16 @@ function render() {
 
 		}
 
+		let tagContainer = document.createElement('div');
+		tagContainer.className = 'project-tags';
+		for (let i = 0; i < project.tags.length; i++) {
+			let tag = document.createElement('div');
+			tag.className += 'tag';
+			tag.innerHTML = project.tags[i];
+
+			tagContainer.appendChild(tag);
+		}
+
 		let techContainer = document.createElement('div');
 		techContainer.className = 'project-langs';
 
@@ -159,15 +180,18 @@ function render() {
 
 		item.appendChild(projectImg);
 		item.appendChild(projectName)
+		item.appendChild(projectDescription);
 		item.appendChild(buttonContainer);
 		item.appendChild(techContainer);
+		item.appendChild(tagContainer);
 		container.appendChild(item);
 	});
 
 
 	// Render filter
-	const htmlBtn = (content) => `<button class="lang" onclick='handleClick(this);'>${content}</button>` 
+	const htmlBtn = (content) => `<button class="lang" onclick='handleClick(this);'><i class='${TECH_ICONS[content]}'></i><span class='whitespace-xs'></span>${content}</button>` 
 	filterList.innerHTML += htmlBtn('All');
+	filterList.children.item(0).className += ' active';
 	Object.keys(TECHNOLOGIES).forEach((e, i) => {
 		filterList.innerHTML += (htmlBtn(e))
 	});
@@ -175,6 +199,12 @@ function render() {
 }
 
 function handleClick(elem) {
+	for (let i = 0; i < filterList.children.length; i++) {
+		filterList.children.item(i).classList.remove('active');
+	}
+
+	elem.className += ' active';
+	
 	if (elem.innerText == 'All') {
 		for (let i = 0; i < container.children.length; i++) {
 			container.children.item(i).classList.remove('hidden');
@@ -183,6 +213,7 @@ function handleClick(elem) {
 		return;
 	}
 
+
 	let filter = [elem.innerText].concat(TECHNOLOGIES[elem.innerText]);
 
 	for (var i = 0; i < container.children.length; i++) {
@@ -190,16 +221,11 @@ function handleClick(elem) {
 		let hasTech = filter.some((t) => projects[i].technologies.includes(t));
 
 		if (!hasTech) {
-			child.className += ' hidden'
+			child.className += ' hidden';
 		} else {
 			child.classList.remove('hidden');
 		}
 	}
-	// .forEach((child) => {
-	// 	console.log(child);
-	// })
-
-	// console.log(filter());
 }
 
 function filter() {

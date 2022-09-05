@@ -128,6 +128,7 @@ button {
   border: none;
   font-family: Lato, Arial, Helvetica, sans-serif;
   min-width: 5em;
+  position: relative;
 }
 button:hover:not(:disabled) {
   background-color: rgba(0, 0, 0, 0.2);
@@ -135,6 +136,17 @@ button:hover:not(:disabled) {
 }
 button:disabled {
   opacity: 0.5;
+}
+button.active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 80%;
+  right: 50%;
+  bottom: calc(50% - 25px);
+  transform: translate(50%, -50%);
+  background-color: #3E5FE7;
+  border-radius: 6px;
 }
 
 .primary {

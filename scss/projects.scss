@@ -1,12 +1,12 @@
 @use 'base';
 
 .background {
-	background: radial-gradient(at right top,#1A344B 0%, #1E1E2C 75%);
+	background: radial-gradient(at top,#1A344B 0%, #1E1E2C 75%);
 }
 
 .projects-container {
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: repeat(4, 300px);
 	gap: 2em;
 	padding: 2em;
 	.projects-item {
@@ -30,7 +30,7 @@
 			margin: 15px 0;
 		}
 		
-		.project-buttons {
+		.project-buttons, .project-langs {
 			margin: 15px 0;
 			display: flex;
 			justify-content: center;
@@ -38,18 +38,31 @@
 			gap: 10px;
 		}
 
-		.project-langs {
+		.project-langs .lang {
+				padding: 0.8em;
+				border-radius: 0.5em;
+				background-color: rgba(#000, 0.2);
+		}
+
+		.project-tags {
 			display: flex;
 			justify-content: center;
 			gap: 15px;
 			flex-wrap: wrap;
 			
-			.lang {
-				padding: 0.8em;
-				border-radius: 0.5em;
+			.tag {
+				padding: 0.2em 0.8em;
+				border-radius: 1em;
 				background-color: rgba(#000, 0.2);
+				border: 1px solid rgba(white, 0.2);
 			}
 		}
 
+	}
+}
+
+.project-filter {
+	* {
+		display: inline-block;
 	}
 }

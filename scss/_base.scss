@@ -134,6 +134,7 @@ button {
 	border: none;
 	font-family: v.$main-font;
 	min-width: 5em;
+	position: relative;
 	
 	&:hover:not(:disabled) {
 		background-color: rgba(#000, 0.2);
@@ -142,6 +143,18 @@ button {
 
 	&:disabled {
 		opacity: 0.5;
+	}
+
+	&.active::after {
+		content: '';
+		position: absolute;
+		height: 3px;
+		width: 80%;
+		right: 50%;
+		bottom: calc(50% - 25px);
+		transform: translate(50%, -50%);
+		background-color: v.$main-color;
+		border-radius: 6px;
 	}
 }
 
