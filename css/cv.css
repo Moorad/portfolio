@@ -166,6 +166,39 @@ a {
   color: #99aaf2;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 50%;
+  margin-left: -60px;
+  z-index: 1;
+}
+.tooltip .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
 #construction {
   background-image: repeating-linear-gradient(45deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4) 10px, rgba(243, 189, 33, 0.4) 10px, rgba(243, 189, 33, 0.4) 17.5px);
   background-size: 50px 50px;

@@ -193,13 +193,18 @@ function render() {
 
 		for (let i = 0; i < project.technologies.length; i++) {
 			let tech = document.createElement('div');
-			tech.className = 'lang';
+			tech.className = 'lang tooltip';
 
 			let icon = document.createElement('i');
 			icon.className = TECH_ICONS[project.technologies[i]];
 			icon.className += ' fa-lg';
 
+			let tooltipText = document.createElement('span');
+			tooltipText.className += 'tooltip-text';
+			tooltipText.innerText = project.technologies[i];
+
 			tech.appendChild(icon);
+			tech.appendChild(tooltipText);
 
 			techContainer.appendChild(tech);
 		}

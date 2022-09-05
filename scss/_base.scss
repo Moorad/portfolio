@@ -175,6 +175,44 @@ a {
 	color: lighten(v.$main-color, 20%);
 }
 
+.tooltip {
+	position: relative;
+	display: inline-block;
+
+	.tooltip-text {
+		visibility: hidden;
+		width: 120px;
+		background-color: rgba(#000, 1);
+		color: #fff;
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 6px;
+	   
+		/* Position the tooltip text - see examples below! */
+		position: absolute;
+		top:calc(100% + 7px);
+		left: 50%;
+		margin-left: -60px;
+		z-index: 1;
+
+		&::after {
+			content: " ";
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: transparent transparent black transparent;
+		  }
+
+	  }
+
+	  &:hover .tooltip-text {
+		visibility: visible;
+	  }
+}
+
 // remove later
 #construction {
 	background-image: repeating-linear-gradient(
