@@ -19,6 +19,7 @@ const projects = [{
 			'JavaScript'
 		],
 		'tags': [
+			'Personal',
 			'UI'
 		]
 	},
@@ -44,6 +45,8 @@ const projects = [{
 			'Bootstrap'
 		],
 		'tags': [
+			'Personal',
+			'Web App'
 		]
 	},
 	{
@@ -72,6 +75,29 @@ const projects = [{
 			'Tensorflow',
 		],
 		'tags': [
+			'Machine Learning'
+		]
+	}, 	{
+		'name': 'Rats Game',
+		'description': 'A clone of <a href="http://www.windowsgames.co.uk/rats.html">1996 Rats! game by Sean O’Connor</a>. This is a game of strategy, quick response anda little luck! This was a 8 member group university project for CS-230',
+		'preview_img': 'images/rat_game.png',
+		'buttons': [{
+			'icon_class': 'fa-solid fa-download',
+			'text': 'Download',
+			'link': '',
+			'isDisabled': true
+		}, {
+			'icon_class': 'fa-solid fa-code',
+			'text': 'Repo',
+			'link': '',
+			'isDisabled': true
+		}],
+		'technologies': [
+			'Java',
+		],
+		'tags': [
+			'University',
+			'Group project'
 		]
 	}
 ];
@@ -121,7 +147,7 @@ function render() {
 
 		let projectDescription = document.createElement('div');
 		projectDescription.className = 'project-description';
-		projectDescription.innerText = project.description;
+		projectDescription.innerHTML = project.description;
 
 		let buttonContainer = document.createElement('div');
 		buttonContainer.className = 'project-buttons';

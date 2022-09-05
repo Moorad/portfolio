@@ -162,6 +162,10 @@ button.active::after {
   display: none;
 }
 
+a {
+  color: #99aaf2;
+}
+
 #construction {
   background-image: repeating-linear-gradient(45deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4) 10px, rgba(243, 189, 33, 0.4) 10px, rgba(243, 189, 33, 0.4) 17.5px);
   background-size: 50px 50px;

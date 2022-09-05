@@ -162,6 +162,10 @@ button.active::after {
   display: none;
 }
 
+a {
+  color: #99aaf2;
+}
+
 #construction {
   background-image: repeating-linear-gradient(45deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4) 10px, rgba(243, 189, 33, 0.4) 10px, rgba(243, 189, 33, 0.4) 17.5px);
   background-size: 50px 50px;
@@ -182,7 +186,7 @@ button.active::after {
   border-radius: 1em;
 }
 .projects-container .projects-item .project-img {
-  border-radius: 1em;
+  border-radius: 0.5em;
   width: 100%;
 }
 .projects-container .projects-item .project-name {
@@ -210,14 +214,14 @@ button.active::after {
 .projects-container .projects-item .project-tags {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 .projects-container .projects-item .project-tags .tag {
   padding: 0.2em 0.8em;
   border-radius: 1em;
   background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-filter * {
