@@ -1,3 +1,4 @@
+// If a button is disabled, you must provide a "reason" object key alongside that
 const projects = [{
 		'name': 'Portfolio',
 		'description': 'This project is the website you are currently viewing!',
@@ -31,7 +32,8 @@ const projects = [{
 			'icon_class': 'fa-solid fa-link',
 			'text': 'Visit',
 			'link': '',
-			'isDisabled': true
+			'isDisabled': true,
+			'reason': 'The project is currently under development, it will be deployed once its ready'
 		}, {
 			'icon_class': 'fa-solid fa-code',
 			'text': 'Repo',
@@ -80,12 +82,14 @@ const projects = [{
 			'icon_class': 'fa-solid fa-download',
 			'text': 'Download',
 			'link': '',
-			'isDisabled': true
+			'isDisabled': true,
+			'reason': 'Due to academic misconduct I am unable to share the source code for this project <s>yet</s>'
 		}, {
 			'icon_class': 'fa-solid fa-code',
 			'text': 'Repo',
 			'link': '',
-			'isDisabled': true
+			'isDisabled': true,
+			'reason': 'Due to academic misconduct I am unable to share the source code for this project <s>yet</s>'
 		}],
 		'technologies': [
 			'Java',
@@ -180,8 +184,14 @@ function render() {
 			let button = document.createElement('button');
 			button.className = 'primary';
 
+			let tooltip;
 			if (project.buttons[i].isDisabled) {
 				button.disabled = true;
+				button.className += ' tooltip';
+
+				tooltip = document.createElement('span');
+				tooltip.className = 'tooltip-text wide';
+				tooltip.innerHTML = project.buttons[i].reason;
 			}
 
 			let icon = document.createElement('i');
@@ -193,6 +203,10 @@ function render() {
 			button.appendChild(icon);
 			button.appendChild(whitespace);
 			button.appendChild(document.createTextNode(project.buttons[i].text));
+
+			if (tooltip != undefined) {
+				button.appendChild(tooltip);
+			}
 
 			hyperlink.appendChild(button);
 

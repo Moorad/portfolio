@@ -142,7 +142,8 @@ button {
 	}
 
 	&:disabled {
-		opacity: 0.5;
+		background-color: rgba(v.$main-color, 0.3);
+		color: rgba(white, 0.3);
 	}
 
 	&.active::after {
@@ -178,7 +179,7 @@ a {
 .tooltip {
 	position: relative;
 	display: inline-block;
-
+	
 	.tooltip-text {
 		visibility: hidden;
 		width: 120px;
@@ -205,6 +206,13 @@ a {
 			border-style: solid;
 			border-color: transparent transparent black transparent;
 		  }
+
+		&.wide {
+			width: 160px;
+			margin-left: -80px;
+			padding: 5px;
+			
+		}
 
 	  }
 
