@@ -210,13 +210,15 @@ a {
 }
 
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(4, 300px);
-  gap: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5em;
   padding: 2em;
 }
 .projects-container .projects-item {
   border-radius: 1em;
+  width: 300px;
 }
 .projects-container .projects-item .project-img {
   border-radius: 0.5em;

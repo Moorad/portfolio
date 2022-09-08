@@ -5,13 +5,15 @@
 }
 
 .projects-container {
-	display: grid;
-	grid-template-columns: repeat(4, 300px);
-	gap: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2.5em;
 	padding: 2em;
+	
 	.projects-item {
 		border-radius: 1em;
-		// outline: 2px solid white;
+		width: 300px;
 		
 		.project-img {
 			border-radius: 0.5em;

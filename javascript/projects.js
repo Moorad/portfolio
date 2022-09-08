@@ -1,6 +1,6 @@
 const projects = [{
 		'name': 'Portfolio',
-		'description': '(This site!)',
+		'description': 'This project is the website you are currently viewing!',
 		'preview_img': 'images/placeholder.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-link',
@@ -20,11 +20,12 @@ const projects = [{
 		],
 		'tags': [
 			'Personal',
+			'Website',
 			'UI'
 		]
 	}, {
 		'name': 'Home Server',
-		'description': 'A personal home server to remotely view and manage files and projects',
+		'description': 'This is a system that I\'ve setup to manage my files, project deployments and tools at home.',
 		'preview_img': 'images/placeholder.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-link',
@@ -49,22 +50,17 @@ const projects = [{
 		]
 	}, {
 		'name': 'Cifar10 ML',
-		'description': 'Simple cifar10 machine learning project',
+		'description': 'This is a simple neural network for object recognition. The model gets trained with the <a href="http://www.cs.toronto.edu/~kriz/cifar.html">cifar-10 dataset</a>, this is a dataset that consists of 60,000 32x32 colour images in 10 classes.',
 		'preview_img': 'images/cifar10.png',
 		'buttons': [{
-			'icon_class': 'fa-solid fa-link',
-			'text': 'Visit',
-			'link': '',
-			'isDisabled': true
+			'icon_class': 'icon-googlecolab',
+			'text': 'Colab',
+			'link': 'https://colab.research.google.com/drive/1tCls8ue2ntO0xBTrRKmWcP4Bb-bkx7Ma?usp=sharing',
+			'isDisabled': false
 		}, {
 			'icon_class': 'fa-solid fa-code',
 			'text': 'Repo',
 			'link': 'https://github.com/Moorad/cifar10-ml',
-			'isDisabled': false
-		}, {
-			'icon_class': 'icon-googlecolab',
-			'text': 'Colab',
-			'link': 'https://colab.research.google.com/drive/1tCls8ue2ntO0xBTrRKmWcP4Bb-bkx7Ma?usp=sharing',
 			'isDisabled': false
 		}],
 		'technologies': [
@@ -73,11 +69,12 @@ const projects = [{
 			'Tensorflow',
 		],
 		'tags': [
+			'Personal',
 			'Machine Learning'
 		]
 	}, {
 		'name': 'Rats Game',
-		'description': 'A clone of <a href="http://www.windowsgames.co.uk/rats.html">1996 Rats! game by Sean O’Connor</a>. This is a game of strategy, quick response anda little luck! This was a 8 member group university project for CS-230',
+		'description': 'A clone of <a href="http://www.windowsgames.co.uk/rats.html">1996 Rats! game by Sean O’Connor</a>. This is a game of strategy, quick response and of course a little luck! This was a 8 member group university project for CS-230.',
 		'preview_img': 'images/rat_game.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-download',
@@ -95,11 +92,12 @@ const projects = [{
 		],
 		'tags': [
 			'University',
-			'Group project'
+			'Desktop Game',
+			'Group Project'
 		]
 	}, {
 		'name': 'Tasks',
-		'description': 'A todo list web app',
+		'description': 'Cant keep track of your daily tasks? Tasks might be for you. This was one of my first web application with my frontend and a firebase backend.',
 		'preview_img': 'images/tasks.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-link',
@@ -137,7 +135,8 @@ const TECH_ICONS = {
 	'MongoDB': 'icon-mongodb',
 	'Sass': 'fa-brands fa-sass',
 	'Bootstrap': 'fa-brands fa-bootstrap',
-	'Tensorflow': 'icon-tensorflow'
+	'Tensorflow': 'icon-tensorflow',
+	'Firebase': 'icon-firebase'
 };
 
 let TECHNOLOGIES = {
