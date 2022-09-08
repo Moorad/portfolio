@@ -1,7 +1,7 @@
 const projects = [{
 		'name': 'Portfolio',
 		'description': '(This site!)',
-		'preview_img': 'images/portfolio.png',
+		'preview_img': 'images/placeholder.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-link',
 			'text': 'Visit',
@@ -22,11 +22,10 @@ const projects = [{
 			'Personal',
 			'UI'
 		]
-	},
-	{
+	}, {
 		'name': 'Home Server',
 		'description': 'A personal home server to remotely view and manage files and projects',
-		'preview_img': 'images/home_server.png',
+		'preview_img': 'images/placeholder.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-link',
 			'text': 'Visit',
@@ -48,8 +47,7 @@ const projects = [{
 			'Personal',
 			'Web App'
 		]
-	},
-	{
+	}, {
 		'name': 'Cifar10 ML',
 		'description': 'Simple cifar10 machine learning project',
 		'preview_img': 'images/cifar10.png',
@@ -77,7 +75,7 @@ const projects = [{
 		'tags': [
 			'Machine Learning'
 		]
-	}, 	{
+	}, {
 		'name': 'Rats Game',
 		'description': 'A clone of <a href="http://www.windowsgames.co.uk/rats.html">1996 Rats! game by Sean O’Connor</a>. This is a game of strategy, quick response anda little luck! This was a 8 member group university project for CS-230',
 		'preview_img': 'images/rat_game.png',
@@ -98,6 +96,31 @@ const projects = [{
 		'tags': [
 			'University',
 			'Group project'
+		]
+	}, {
+		'name': 'Tasks',
+		'description': 'A todo list web app',
+		'preview_img': 'images/tasks.png',
+		'buttons': [{
+			'icon_class': 'fa-solid fa-link',
+			'text': 'Visit',
+			'link': 'https://moorad.github.io/Tasks',
+			'isDisabled': false
+		}, {
+			'icon_class': 'fa-solid fa-code',
+			'text': 'Repo',
+			'link': 'https://github.com/Moorad/Tasks',
+			'isDisabled': false
+		}],
+		'technologies': [
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'Firebase'
+		],
+		'tags': [
+			'Personal',
+			'Web App'
 		]
 	}
 ];
@@ -220,7 +243,7 @@ function render() {
 
 
 	// Render filter
-	const htmlBtn = (content) => `<button class="lang" onclick='handleClick(this);'><i class='${TECH_ICONS[content]}'></i><span class='whitespace-xs'></span>${content}</button>` 
+	const htmlBtn = (content) => `<button class="lang" onclick='handleClick(this);'><i class='${TECH_ICONS[content]}'></i><span class='whitespace-xs'></span>${content}</button>`
 	filterList.innerHTML += htmlBtn('All');
 	filterList.children.item(0).className += ' active';
 	Object.keys(TECHNOLOGIES).forEach((e, i) => {
@@ -235,7 +258,7 @@ function handleClick(elem) {
 	}
 
 	elem.className += ' active';
-	
+
 	if (elem.innerText == 'All') {
 		for (let i = 0; i < container.children.length; i++) {
 			container.children.item(i).classList.remove('hidden');
@@ -261,6 +284,6 @@ function handleClick(elem) {
 
 function filter() {
 	console.log(container);
-}	
+}
 
 render();
