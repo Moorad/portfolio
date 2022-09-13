@@ -1,5 +1,16 @@
 @use 'base';
 
 .background {
-	background: radial-gradient(at right,hsl(268, 49%, 20%) 0%, hsl(300, 19%, 15%) 75%);
+	background: radial-gradient(at top,#1A344B 0%, #1E1E2C 75%);
+}
+
+.cv-embed {
+	width: 100%;
+	height: 800px;
+}
+
+.cv-button {
+	display: block;
+	margin: 2rem auto;
+	text-decoration: none;
 }

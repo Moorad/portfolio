@@ -96,6 +96,10 @@ footer {
           backdrop-filter: blur(8px);
   justify-content: center;
 }
+footer button {
+  height: 100%;
+  margin: auto 0.5rem;
+}
 
 section {
   padding: 4em;
