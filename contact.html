@@ -21,7 +21,7 @@
 
 		gtag('config', 'G-ZZR4BV7644');
 	</script>
-	<link rel="stylesheet" href="css/cv.css">
+	<link rel="stylesheet" href="css/contact.css">
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	<title>Moorad's website</title>
 </head>
@@ -71,6 +71,40 @@
 	<div class="background">
 		<canvas id="canvas"></canvas>
 	</div>
+	<section>
+		<form class="contact-form" action="https://formsubmit.co/b989a53f2903eb28b923fff38c96e58d " method="POST">
+			<!-- Honeypot -->
+			<input type="text" name="_honey" style="display:none;">
+
+			<!-- Disable Captcha -->
+			<input type="hidden" name="_captcha" value="false">
+
+			<!-- Success redirect -->
+			<input type="hidden" name="_next" value="http://moorad.dev/success.html">
+
+			<h1>Contact form</h1>
+			<div class="form-block">
+				<label for="name" class="required">Name</label>
+				<input type="text" name="Name" required/>
+			</div>
+			<div class="form-block half-size">
+				<label for="email" class="required">Email</label>
+				<input type="email" name="Email" required/>
+			</div>
+			<div class="form-block half-size">
+				<label for="phone-number">Phone number</label>
+				<input type="number" name="Phone number"/>
+			</div>
+			<div class="form-block">
+				<label for="message" class="required">Message</label>
+				<textarea name="Message" required></textarea>
+			</div>
+			<div class="form-block">
+				<button type="submit" class="primary submit-button">Submit</button>
+			</div>
+			
+		</form>
+	</section>
 	<footer>
 		<a href="https://github.com/Moorad">
 			<button class="footer-icons">
@@ -91,7 +125,7 @@
 	<div id="construction">
 		This website is under heavy construction.
 	</div>
-	<script src="./index.js"></script>
+	<script src="./javascript/base.js"></script>
 </body>
 
 </html>
