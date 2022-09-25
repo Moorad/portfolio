@@ -157,6 +157,7 @@ let TECHNOLOGIES = {
 
 let filterList = document.getElementById('filter-list');
 let container = document.getElementsByClassName('projects-container')[0];
+let filterTags = [];
 
 function render() {
 	projects.forEach((project) => {
@@ -219,6 +220,39 @@ function render() {
 		for (let i = 0; i < project.tags.length; i++) {
 			let tag = document.createElement('div');
 			tag.className += 'tag';
+			tag.onclick = (e) => {
+				let allProjects = document.getElementsByClassName('projects-item');
+				let allTags = document.getElementsByClassName('tag');
+				
+				if (filterTags.includes(e.target.innerText)) {
+					let deleteTagIndex = filterTags.indexOf(e.target.innerText);
+
+					filterTags.splice(deleteTagIndex, 1);
+				} else {
+					filterTags.push(e.target.innerHTML);
+				}
+
+				for (let j = 0; j < allTags.length; j++) {
+					if (filterTags.some((t) => t == allTags[j].innerText)) {
+						allTags[j].classList.add('highlight');
+					} else {
+						allTags[j].classList.remove('highlight')
+					}
+				}
+
+				for (let j = 0; j < allProjects.length; j++) {
+					let tags = allProjects[j].getElementsByClassName('project-tags')[0].childNodes;
+					tags = Array.from(tags);
+					tags = tags.map((t) => t.innerText);
+
+					if (!filterTags.every((t) => tags.includes(t))) {
+						allProjects[j].classList.add('hidden');
+					} else {
+						allProjects[j].classList.remove('hidden');
+					}
+				}
+				
+			}
 			tag.innerHTML = project.tags[i];
 
 			tagContainer.appendChild(tag);
@@ -293,10 +327,6 @@ function handleClick(elem) {
 			child.classList.remove('hidden');
 		}
 	}
-}
-
-function filter() {
-	console.log(container);
 }
 
 render();
