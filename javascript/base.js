@@ -10,7 +10,7 @@ const MAX_STAR_SIZE = 3
 const MAX_OFFSET = 80
 const MIN_OFFSET = 0
 const GAP = 120
-const moveMultiplier = 0.05;
+const moveMultiplier = 0.01;
 
 let stars = [];
 let mouseX = 0;
@@ -23,6 +23,7 @@ class Star {
 		this.y = y;
 		this.size = MIN_STAR_SIZE + Math.floor(Math.random() * (MAX_STAR_SIZE - MIN_STAR_SIZE));
 		this.opacity = 0.7 + Math.floor(Math.random() * 0.3);
+		this.spd = (3 - this.size) * 0.08;
 
 		let offsetxDirection = Math.floor(Math.random() * 3) - 1;
 		let offsetyDirection = Math.floor(Math.random() * 3) - 1;
@@ -34,6 +35,9 @@ class Star {
 	}
 
 	draw() {
+		this.x += this.spd;
+		this.y += this.spd;
+
 		let newX = this.x + ((-1) * (mouseX - (window.innerWidth / 2))) * moveMultiplier;
 		let newY = this.y + ((-1) * (mouseY - (window.innerHeight / 2))) * moveMultiplier;
 
@@ -43,9 +47,6 @@ class Star {
 		ctx.fill();
 	}
 }
-
-
-
 
 function load() {
 	for (let i = 0; i < (canvas.height / GAP); i++) {
@@ -58,24 +59,18 @@ function load() {
 function draw() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	stars.forEach(s => {
+		if (s.x > canvas.width || s.y > canvas.height) {
+			let randomSide = Math.floor(Math.random() * 10);
+			if (randomSide < 3) {
+				s.x = 0;
+				s.y = Math.floor(Math.random() * canvas.height);
+			} else {
+				s.x = Math.floor(Math.random() * canvas.width);
+				s.y = 0;
+			}
+		}
 		s.draw();
 	});
-}
-
-
-function drawStar(x, y) {
-	let size = MIN_STAR_SIZE + Math.floor(Math.random() * (MAX_STAR_SIZE - MIN_STAR_SIZE))
-	let offsetxDirection = Math.floor(Math.random() * 3) - 1;
-	let offsetyDirection = Math.floor(Math.random() * 3) - 1;
-	let offsetMagnitude = MIN_OFFSET + Math.floor(Math.random() * (MAX_OFFSET - MIN_OFFSET))
-	
-		x += ((offsetxDirection) * offsetMagnitude);
-		y += ((offsetyDirection) * offsetMagnitude);
-
-
-	ctx.beginPath();
-	ctx.arc(x, y, size, 0, Math.PI *  2, false);
-	ctx.fill();
 }
 
 window.addEventListener('scroll', (e) => {
