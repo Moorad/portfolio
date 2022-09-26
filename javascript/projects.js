@@ -2,7 +2,7 @@
 const projects = [{
 		'name': 'Portfolio',
 		'description': 'This project is the website you are currently viewing!',
-		'preview_img': 'images/placeholder.png',
+		'preview_img': 'images/portfolio.png',
 		'buttons': [{
 			'icon_class': 'fa-solid fa-link',
 			'text': 'Visit',
@@ -162,44 +162,47 @@ let filterTags = [];
 function render() {
 	projects.forEach((project) => {
 		let item = document.createElement('div');
-		item.className = 'projects-item';
+		item.classList.add('projects-item');
 
 		let projectImg = document.createElement('img');
-		projectImg.className = 'project-img';
+		projectImg.classList.add('project-img');
 		projectImg.src = project.preview_img;
 
 		let projectName = document.createElement('div');
-		projectName.className = 'project-name';
+		projectName.classList.add('project-name');
 		projectName.innerText = project.name;
 
 		let projectDescription = document.createElement('div');
-		projectDescription.className = 'project-description';
+		projectDescription.classList.add('project-description');
 		projectDescription.innerHTML = project.description;
 
 		let buttonContainer = document.createElement('div');
-		buttonContainer.className = 'project-buttons';
+		buttonContainer.classList.add('project-buttons');
+
 		for (let i = 0; i < project.buttons.length; i++) {
 			let hyperlink = document.createElement('a');
 			hyperlink.href = project.buttons[i].link;
 
 			let button = document.createElement('button');
-			button.className = 'primary';
+			button.classList.add('primary');
 
 			let tooltip;
 			if (project.buttons[i].isDisabled) {
 				button.disabled = true;
-				button.className += ' tooltip';
+				button.classList.add('tooltip');
 
 				tooltip = document.createElement('span');
-				tooltip.className = 'tooltip-text wide';
+				tooltip.classList.add('tooltip-text', 'wide');
 				tooltip.innerHTML = project.buttons[i].reason;
 			}
 
 			let icon = document.createElement('i');
+			// icon.classList.add(...project.buttons[i].icon_class.split(' '));
+			// I have no choice, have to use className here. its either that or the monster above
 			icon.className = project.buttons[i].icon_class;
 
 			let whitespace = document.createElement('span');
-			whitespace.className = 'whitespace-xs';
+			whitespace.classList.add('whitespace-xs');
 
 			button.appendChild(icon);
 			button.appendChild(whitespace);
@@ -216,10 +219,10 @@ function render() {
 		}
 
 		let tagContainer = document.createElement('div');
-		tagContainer.className = 'project-tags';
+		tagContainer.classList.add('project-tags');
 		for (let i = 0; i < project.tags.length; i++) {
 			let tag = document.createElement('div');
-			tag.className += 'tag';
+			tag.classList.add('tag');
 			tag.onclick = (e) => {
 				let allProjects = document.getElementsByClassName('projects-item');
 				let allTags = document.getElementsByClassName('tag');
@@ -259,18 +262,18 @@ function render() {
 		}
 
 		let techContainer = document.createElement('div');
-		techContainer.className = 'project-langs';
+		techContainer.classList.add('project-langs');
 
 		for (let i = 0; i < project.technologies.length; i++) {
 			let tech = document.createElement('div');
-			tech.className = 'lang tooltip';
+			tech.classList.add('lang', 'tooltip');
 
 			let icon = document.createElement('i');
 			icon.className = TECH_ICONS[project.technologies[i]];
-			icon.className += ' fa-lg';
+			icon.classList.add('fa-lg');
 
 			let tooltipText = document.createElement('span');
-			tooltipText.className += 'tooltip-text';
+			tooltipText.classList.add('tooltip-text');
 			tooltipText.innerText = project.technologies[i];
 
 			tech.appendChild(icon);
@@ -292,7 +295,7 @@ function render() {
 	// Render filter
 	const htmlBtn = (content) => `<button class="lang" onclick='handleClick(this);'><i class='${TECH_ICONS[content]}'></i><span class='whitespace-xs'></span>${content}</button>`
 	filterList.innerHTML += htmlBtn('All');
-	filterList.children.item(0).className += ' active';
+	filterList.children.item(0).classList.add('active');
 	Object.keys(TECHNOLOGIES).forEach((e, i) => {
 		filterList.innerHTML += (htmlBtn(e))
 	});
@@ -304,7 +307,7 @@ function handleClick(elem) {
 		filterList.children.item(i).classList.remove('active');
 	}
 
-	elem.className += ' active';
+	elem.classList.add('active');
 
 	if (elem.innerText == 'All') {
 		for (let i = 0; i < container.children.length; i++) {
@@ -322,7 +325,7 @@ function handleClick(elem) {
 		let hasTech = filter.some((t) => projects[i].technologies.includes(t));
 
 		if (!hasTech) {
-			child.className += ' hidden';
+			child.classList.add('hidden');
 		} else {
 			child.classList.remove('hidden');
 		}
