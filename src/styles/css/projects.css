@@ -2,26 +2,45 @@ body, html {
   margin: 0;
   padding: 0;
   color: white;
+  background-color: #1E1E2C;
   font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
-.background {
-  height: 100vh;
-  position: fixed;
-  background-color: #121A1E;
-  z-index: -10;
-  top: 0;
+.main-container {
+  max-width: 81rem;
+  margin-right: auto;
+  margin-left: auto;
+  outline: 2px dashed red;
 }
 
-@-webkit-keyframes nav-scroll {
-  from {
-    background: none;
-  }
-  to {
-    background-color: rgba(18, 26, 30, 0.3);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-  }
+.nav-container {
+  height: 4.4rem;
+  max-width: 81rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.nav-container .nav-inner-container {
+  display: flex;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+  align-items: center;
+  height: 100%;
+  gap: 2.6rem;
+}
+.nav-container .nav-inner-container .nav-logo {
+  font-weight: 900;
+  font-size: 34px;
+  cursor: pointer;
+}
+.nav-container .nav-inner-container .nav-items {
+  display: flex;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  gap: 2.6rem;
+}
+.nav-container .nav-inner-container .nav-right {
+  margin-left: auto;
 }
 
 @keyframes nav-scroll {
@@ -30,8 +49,7 @@ body, html {
   }
   to {
     background-color: rgba(18, 26, 30, 0.3);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
   }
 }
 .nav-bar {
@@ -80,20 +98,16 @@ body, html {
 }
 
 .nav-bar-scroll {
-  -webkit-animation-name: nav-scroll;
-          animation-name: nav-scroll;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-name: nav-scroll;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 
 footer {
   display: flex;
   height: 4rem;
   background-color: rgba(18, 26, 30, 0.3);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   justify-content: center;
 }
 footer button {
@@ -276,3 +290,5 @@ a {
 .project-filter * {
   display: inline-block;
 }
+
+/*# sourceMappingURL=projects.css.map */
