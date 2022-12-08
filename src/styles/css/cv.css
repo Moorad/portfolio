@@ -2,7 +2,6 @@ body, html {
   margin: 0;
   padding: 0;
   color: white;
-  width: 100vw;
   background-color: #1E1E2C;
   font-family: Nunito, Arial, Helvetica, sans-serif;
 }
@@ -13,10 +12,17 @@ body, html {
   margin-left: auto;
 }
 
+.nav-outer-container {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  padding-top: 2rem;
+  transition: 0.1s;
+}
+
 .nav-container {
   height: 4.4rem;
   max-width: 81rem;
-  padding-top: 2rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -39,6 +45,22 @@ body, html {
   font-weight: 500;
   cursor: pointer;
   gap: 2.6rem;
+  color: white;
+}
+.nav-container .nav-inner-container .nav-items .active {
+  position: relative;
+}
+.nav-container .nav-inner-container .nav-items .active::after {
+  color: #3E5FE7;
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 80%;
+  right: 50%;
+  bottom: calc(50% - 25px);
+  transform: translate(50%, -50%);
+  background-color: #3E5FE7;
+  border-radius: 6px;
 }
 .nav-container .nav-inner-container .nav-right {
   margin-left: auto;
@@ -48,15 +70,23 @@ body, html {
   padding-left: 1.2rem;
 }
 
+.nav-scroll {
+  padding-top: 0;
+  background-color: rgba(236, 252, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+
 .title-lg {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 42px;
   text-align: center;
   padding: 0.4rem 0rem;
 }
 
 .sub-title {
   text-align: center;
+  font-size: 16px;
+  line-height: 160%;
   padding: 0.4rem 0rem;
   font-weight: 400;
 }
@@ -75,6 +105,9 @@ button:hover:not(:disabled) {
   background-color: #1f1f1f;
   cursor: pointer;
 }
+button:active {
+  background-color: #050505 !important;
+}
 button:disabled {
   background-color: rgba(62, 95, 231, 0.3);
   color: rgba(255, 255, 255, 0.3);
@@ -84,29 +117,22 @@ button:disabled {
   background-color: #3E5FE7;
 }
 .primary:hover:not(:disabled) {
-  background-color: #5572ea !important;
+  background-color: #5572ea;
+}
+.primary:active {
+  background-color: #274ce4 !important;
 }
 
 a {
   color: #99aaf2;
 }
-a.no-underline {
+a.no-decoration {
   text-decoration: none;
+  color: white;
 }
 
-@keyframes nav-scroll {
-  from {
-    background: none;
-  }
-  to {
-    background-color: rgba(18, 26, 30, 0.3);
-    backdrop-filter: blur(8px);
-  }
-}
-.nav-bar-scroll {
-  animation-name: nav-scroll;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
+.section-gap {
+  margin-top: 8rem;
 }
 
 footer {

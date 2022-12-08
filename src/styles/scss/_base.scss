@@ -4,7 +4,6 @@ body, html {
 	margin: 0;
 	padding: 0;
 	color: white;
-	width: 100vw;
 	background-color: v.$base-background-color;
 	font-family: v.$main-font;
 }
@@ -17,13 +16,16 @@ body, html {
 }
 
 .nav-outer-container {
-	// background: rgba(236, 252, 255, 0.08);
+	z-index: 100;
+	position: sticky;
+	top: 0;
+	padding-top: 2rem;
+	transition: 0.1s;
 }
 
 .nav-container {
 	height: 4.4rem;
 	max-width: v.$main-container-width;
-	padding-top: 2rem;
 	margin-right: auto;
 	margin-left: auto;
 	
@@ -47,6 +49,24 @@ body, html {
 			font-weight: 500;
 			cursor: pointer;
 			gap: 2.6rem;
+			color: white;
+
+			.active {
+				position: relative;
+			}
+
+			.active::after {
+				color: v.$main-color;
+				content: '';
+				position: absolute;
+				height: 3px;
+				width: 80%;
+				right: 50%;
+				bottom: calc(50% - 25px);
+				transform: translate(50%, -50%);
+				background-color: v.$main-color;
+				border-radius: 6px;
+		   }
 		}
 	
 		.nav-right {
@@ -61,15 +81,23 @@ body, html {
 	}
 }
 
+.nav-scroll {
+	padding-top: 0;
+	background-color: rgba(236, 252, 255, 0.08);
+	backdrop-filter: blur(6px);
+}
+
 .title-lg {
 	font-weight: 700;
-	font-size: 48px;
+	font-size: 42px;
 	text-align: center;
 	padding: 0.4rem 0rem;
 }
 
 .sub-title {
 	text-align: center;
+	font-size: 16px;
+	line-height: 160%;
 	padding: 0.4rem 0rem;
 	font-weight: 400;
 }
@@ -89,52 +117,39 @@ button {
 		cursor: pointer;
 	}
 
+	&:active {
+		background-color: darken(#121212, 5%) !important;
+	}
+
 	&:disabled {
 		background-color: rgba(v.$main-color, 0.3);
 		color: rgba(white, 0.3);
 	}
-
-	// &.active::after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	height: 3px;
-		// 	width: 80%;
-		// 	right: 50%;
-		// 	bottom: calc(50% - 25px);
-		// 	transform: translate(50%, -50%);
-		// 	background-color: v.$main-color;
-		// 	border-radius: 6px;
-		// }
-	}
+}
 
 .primary {
 	background-color: v.$main-color;
 
 	&:hover:not(:disabled) {
-		background-color: lighten(v.$main-color, 5%) !important;
+		background-color: lighten(v.$main-color, 5%);
+	}
+
+	&:active {
+		background-color: darken(v.$main-color, 5%) !important;
 	}
 }
 	
 a {
 	color: lighten(v.$main-color, 20%);
 	
-	&.no-underline {
+	&.no-decoration {
 		text-decoration: none;	
+		color: white;
 	}
 }
 
-@keyframes nav-scroll {
-	from {background: none;}
-	to {
-		background-color: rgba(18, 26, 30, 0.3);
-		backdrop-filter: blur(8px);
-	}
-}
-
-.nav-bar-scroll {
-	animation-name: nav-scroll;
-	animation-duration: 0.5s;
-	animation-fill-mode: both;
+.section-gap {
+	margin-top:8rem ;
 }
 
 footer {
