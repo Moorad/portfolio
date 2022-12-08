@@ -1,150 +1,101 @@
-@use 'variables' as v;
-@use 'base';
+@use "variables" as v;
+@use "base";
 
 body {
-	background: radial-gradient(100% 100vh at 50% 0%, #1A344B 0%, #1E1E2C 100%)
+    background: radial-gradient(100% 100vh at 50% 0%, #1a344b 0%, #1e1e2c 100%);
 }
 
 .hero-container {
-	position: relative;
-	min-height: 51rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: relative;
+    min-height: 51rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	button {
-		margin-right: auto;
-		margin-left: auto;
-	}
+    button {
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-	.hero-inner-container {
-		width: 32rem;
-	}
+    .hero-inner-container {
+        width: 32rem;
+    }
 
-	.title-lg {
-		padding: 0.5rem 0;
-	}
+    .title-lg {
+        padding: 0.5rem 0;
+    }
 
-	.sub-title {
-		padding: 0.8rem 0 1.7rem 0;
-	}
+    .sub-title {
+        padding: 0.8rem 0 1.7rem 0;
+    }
 
-	.down-icon {
-		position: absolute;
-		bottom: 0;
-	}
+    .down-icon {
+        position: absolute;
+        bottom: 0;
+    }
 }
 
-.main-section {
-	height: calc(100vh - 4em);
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
 
-	.main-image {
-		position: absolute;
-		top: 8em;
-		right: 6em; 
-		width: 42%;
-	}
+    &:has(.reverse) {
+        flex-direction: row-reverse;
+        text-align: right;
 
-	.text-container {
-		position: absolute;
-		top: 35%;
-		left: 5em;
-		font-weight: 900;
+        div {
+            direction: rtl;
+        }
+    }
 
-		.main-text {
-			font-size: 4.5em;
-		}
+    .timeline-text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 60%;
 
-		// .secondary-text-container {
-		// 	width: 100%;
+        .time-period-pill {
+            padding: 0.3rem 1rem;
+            background-color: v.$main-color;
+            border-radius: 9999px;
+            width: fit-content;
+        }
 
-			.secondary-text {
-				float: left;
-				clear: left;
-				font-size: 2.6em;
-				background-color: v.$main-color;
-				padding: 0.3em 0.5em;
-				border-radius: 0.85rem;
-				box-shadow: 0px 0px 50px rgba(v.$main-color, 0.5);
-			}
-		// }
+        .timeline-title {
+            font-size: 32px;
+            font-weight: 700;
+        }
 
-		.ternary-text {
-			float: left;
-			clear: left;
-			font-size: 2em;
-			padding: 0.3em 0.5em;
-			border-radius: 0.85rem;
-			background-color: rgba(0,0,0, 0.2);
-			margin-top: 0.3em;
-		}
-	}
+        .timeline-description {
+            max-width: 25rem;
+            direction: ltr;
+        }
 
-	.down-icon {
-		position: absolute;
-		bottom: 70px;
-		right: 50%;
-		transform: translate(50%, 0);
-	}	
+        .timeline-button {
+            margin: 1rem 0;
+        }
+    }
+
+    .timeline-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        img {
+            width: 80%;
+        }
+    }
 }
 
-@keyframes blink {
-	0%   { visibility: visible; }
-	47%  { visibility: visible; }
-	50%  { visibility: hidden; }
-	97%  { visibility: hidden; }
-	100% { visibility: visible; }
-}
+@media only screen and (max-width: 950px) {
+    .timeline-item {
+        .timeline-text-container {
+            width: 100%;
+        }
 
-.cursor {
-	display: inline-block;
-	animation: blink 1.2s linear infinite;
-}
-
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	img {
-		width: 20em;
-		border-radius: 50%;
-	}
-
-	p {
-		margin-right:4em;
-	}
-}
-
-
-.grid-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	
-	.grid-item {
-		text-align: center;
-		padding: 3em;
-		border: 2px solid v.$main-color;
-		margin: 10px;
-		border-radius: 0.35em;
-		position: relative;
-
-		.icon {
-			font-size: 10em;
-		}
-
-		
-		.skill-text {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			white-space: nowrap;
-		}
-	}
-
-	.grid-item:hover {
-		background-color: v.$main-color;
-	}
+        .timeline-img-container {
+            display: none;
+        }
+    }
 }

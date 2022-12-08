@@ -1,265 +1,182 @@
-@use 'variables' as v;
+@use "variables" as v;
 
-body, html {
-	margin: 0;
-	padding: 0;
-	color: white;
-	background-color: v.$base-background-color;
-	font-family: v.$main-font;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: v.$base-background-color;
+    font-family: v.$main-font;
 }
 
 .main-container {
-	max-width: v.$main-container-width;
-	margin-right: auto;
-	margin-left: auto;
-	// outline: 2px dashed red; 
+    max-width: v.$main-container-width;
+    margin-right: auto;
+    margin-left: auto;
+    // outline: 2px dashed red;
 }
 
 .nav-outer-container {
-	z-index: 100;
-	position: sticky;
-	top: 0;
-	padding-top: 2rem;
-	transition: 0.1s;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    padding-top: 2rem;
+    transition: 0.1s;
 }
 
 .nav-container {
-	height: 4.4rem;
-	max-width: v.$main-container-width;
-	margin-right: auto;
-	margin-left: auto;
-	
-	.nav-inner-container {
-		display: flex;
-		padding-right: 2.4rem;
-		padding-left: 2.4rem;
-		align-items: center;
-		height: 100%;
-		gap: 2.6rem;
+    height: 4.4rem;
+    max-width: v.$main-container-width;
+    margin-right: auto;
+    margin-left: auto;
 
-		.nav-logo {
-			font-weight: 900;
-			font-size: 34px;
-			cursor: pointer;
-		}
-		
-		.nav-items {
-			display: flex;
-			font-size: 17px;
-			font-weight: 500;
-			cursor: pointer;
-			gap: 2.6rem;
-			color: white;
+    .nav-inner-container {
+        display: flex;
+        padding-right: 2.4rem;
+        padding-left: 2.4rem;
+        align-items: center;
+        height: 100%;
+        gap: 2.6rem;
 
-			.active {
-				position: relative;
-			}
+        .nav-logo {
+            font-weight: 900;
+            font-size: 34px;
+            cursor: pointer;
+        }
 
-			.active::after {
-				color: v.$main-color;
-				content: '';
-				position: absolute;
-				height: 3px;
-				width: 80%;
-				right: 50%;
-				bottom: calc(50% - 25px);
-				transform: translate(50%, -50%);
-				background-color: v.$main-color;
-				border-radius: 6px;
-		   }
-		}
-	
-		.nav-right {
-			margin-left: auto;
-			
-			button {
-				padding-right: 1.2rem;
-				padding-left: 1.2rem;
-			}
-		}
+        .nav-items {
+            display: flex;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            gap: 2.6rem;
+            color: white;
 
-	}
+            .active {
+                position: relative;
+            }
+
+            .active::after {
+                color: v.$main-color;
+                content: "";
+                position: absolute;
+                height: 3px;
+                width: 80%;
+                right: 50%;
+                bottom: calc(50% - 25px);
+                transform: translate(50%, -50%);
+                background-color: v.$main-color;
+                border-radius: 6px;
+            }
+        }
+
+        .nav-right {
+            margin-left: auto;
+
+            button {
+                padding-right: 1.2rem;
+                padding-left: 1.2rem;
+            }
+        }
+    }
 }
 
 .nav-scroll {
-	padding-top: 0;
-	background-color: rgba(236, 252, 255, 0.08);
-	backdrop-filter: blur(6px);
+    padding-top: 0;
+    background-color: rgba(236, 252, 255, 0.08);
+    backdrop-filter: blur(6px);
 }
 
 .title-lg {
-	font-weight: 700;
-	font-size: 42px;
-	text-align: center;
-	padding: 0.4rem 0rem;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+    padding: 0.4rem 0rem;
 }
 
 .sub-title {
-	text-align: center;
-	font-size: 16px;
-	line-height: 160%;
-	padding: 0.4rem 0rem;
-	font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    line-height: 160%;
+    padding: 0.4rem 0rem;
+    font-weight: 400;
 }
 
 button {
-	display: block;
-	border-radius: 0.4rem;
-	color: white;
-	padding: 0.6rem 1.5rem;
-	background-color: #121212;
-	font-size: 18px;
-	font-family: v.$main-font;
-	border: none;
-	
-	&:hover:not(:disabled) {
-		background-color: lighten(#121212, 5%);
-		cursor: pointer;
-	}
+    display: block;
+    border-radius: 0.4rem;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    background-color: #121212;
+    font-size: 18px;
+    font-family: v.$main-font;
+    border: none;
 
-	&:active {
-		background-color: darken(#121212, 5%) !important;
-	}
+    &:hover:not(:disabled) {
+        background-color: lighten(#121212, 5%);
+        cursor: pointer;
+    }
 
-	&:disabled {
-		background-color: rgba(v.$main-color, 0.3);
-		color: rgba(white, 0.3);
-	}
+    &:active {
+        background-color: darken(#121212, 5%) !important;
+    }
+
+    &:disabled {
+        background-color: rgba(v.$main-color, 0.3);
+        color: rgba(white, 0.3);
+    }
 }
 
 .primary {
-	background-color: v.$main-color;
+    background-color: v.$main-color;
 
-	&:hover:not(:disabled) {
-		background-color: lighten(v.$main-color, 5%);
-	}
+    &:hover:not(:disabled) {
+        background-color: lighten(v.$main-color, 5%);
+    }
 
-	&:active {
-		background-color: darken(v.$main-color, 5%) !important;
-	}
+    &:active {
+        background-color: darken(v.$main-color, 5%) !important;
+    }
 }
-	
+
 a {
-	color: lighten(v.$main-color, 20%);
-	
-	&.no-decoration {
-		text-decoration: none;	
-		color: white;
-	}
+    color: lighten(v.$main-color, 20%);
+
+    &.no-decoration {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .section-gap {
-	margin-top:8rem ;
+    margin-top: 8rem;
 }
 
 footer {
-	display: flex;
-	height: v.$nav-height;
-	background-color: rgba(18, 26, 30, 0.3);
-	backdrop-filter: blur(8px);
-	justify-content: center;
+    display: flex;
+    height: v.$nav-height;
+    background-color: rgba(18, 26, 30, 0.3);
+    backdrop-filter: blur(8px);
+    justify-content: center;
 
-	button {
-		height: 100%;
-		margin: auto 0.5rem;
-		// margin-left: 0.5rem;
-		// margin-right: rem;
-	}
+    button {
+        height: 100%;
+        margin: auto 0.5rem;
+        // margin-left: 0.5rem;
+        // margin-right: rem;
+    }
 }
 
 section {
-	padding: 4em;
-
-	h1 {
-		font-size: 3em;
-	}
+    padding: 4rem;
 }
 
-.section-seperator {
-	background-color: white;
-	height: 2px;
-	width: 10%;
-	margin: auto;
-	border-radius: 2rem;
-}
-
-// Whitespace spans
 span {
-	&.whitespace-sm {
-		margin-left: 8px;
-	}
+    &.whitespace-sm {
+        margin-left: 8px;
+    }
 
-	&.whitespace-xs {
-		margin-left: 4px;
-	}
-} 
-
-// Button types
-
-.outline-primary {
-	border: 2px solid v.$main-color;
-	background-color: rgba(v.$main-color, 0.3);
-}
-
-.hidden {
-	display: none;
-}
-
-.tooltip {
-	position: relative;
-	display: inline-block;
-	
-	.tooltip-text {
-		visibility: hidden;
-		width: 120px;
-		background-color: rgba(#000, 1);
-		color: #fff;
-		text-align: center;
-		padding: 5px 0;
-		border-radius: 6px;
-	   
-		/* Position the tooltip text - see examples below! */
-		position: absolute;
-		top:calc(100% + 7px);
-		left: 50%;
-		margin-left: -60px;
-		z-index: 1;
-
-		&::after {
-			content: " ";
-			position: absolute;
-			bottom: 100%;
-			left: 50%;
-			margin-left: -5px;
-			border-width: 5px;
-			border-style: solid;
-			border-color: transparent transparent black transparent;
-		  }
-
-		&.wide {
-			width: 160px;
-			margin-left: -80px;
-			padding: 5px;
-			
-		}
-
-	  }
-
-	  &:hover .tooltip-text {
-		visibility: visible;
-	  }
-}
-
-// remove later
-#construction {
-	background-image: repeating-linear-gradient(
-		45deg,
-		rgba(#121212, 0.4),
-		rgba(#121212, 0.4) 10px,
-		rgba(#f3bd21, 0.4) 10px,
-		rgba(#f3bd21, 0.4) 17.5px
-	  );
-
-	background-size: 50px 50px;
-	text-align: center;
+    &.whitespace-xs {
+        margin-left: 4px;
+    }
 }

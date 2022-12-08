@@ -2,6 +2,7 @@
 import "../styles/css/index.css";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import TimelineItem from "../components/TimelineItem.astro";
 ---
 
 <Layout title="Home - Moorad's website" active={0}>
@@ -20,98 +21,40 @@ import Card from "../components/Card.astro";
         <div class="down-icon">
             <i class="fa-solid fa-angle-down fa-3x"></i>
         </div>
-        <!-- <div class="main-container">
-			<div class="background">
-				<canvas id="canvas"></canvas>
-			</div>
-			<section class="main-section">
-				<img class="main-image" src="public/programming.svg">
-				<div class="text-container">
-					<div class="main-text">Moorad Altamimi</div>
-					<div class="secondary-text">Web Developer</div>
-					<div class="ternary-text" id="typing-text"></div>
-				</div>
-				<div class="down-icon"><i class="fa-solid fa-angle-down fa-3x"></i></div>
-			</section>
-			<div class="section-seperator"></div>
-			<section class="about-section">
-				<h1>Who am I</h1>
-				<div class="container">
-					<p class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam hic at dicta placeat nemo, recusandae consequuntur voluptatum dignissimos. Delectus, vel eveniet. Dolores itaque nulla similique earum esse sed molestiae illo!. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam perferendis provident corporis magnam architecto ad incidunt a accusantium, minima quibusdam voluptates, nobis dolorum? Excepturi autem magnam ea ad quaerat animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto placeat, sed illo optio similique ex fuga neque, eligendi accusamus ea repellendus, aperiam quis impedit. Reiciendis minus a consectetur aut incidunt?</p>
-					<img src="public/pfp.webp" class="container-img" />
-		
-				</div>
-			</section>
-			<div class="section-seperator"></div>
-			<section class="skill-section">
-				<h1>Skillset</h1>
-				<div class="grid-container">
-					<div class="grid-item">
-						<i class="fa-brands fa-html5 fa-3x"></i>
-						<div class="skill-text">HTML</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-brands fa-css3 fa-3x"></i>
-						<div class="skill-text">CSS</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-brands fa-js fa-3x"></i>
-						<div class="skill-text">JavaScript</div>
-					</div>
-					<div class="grid-item">
-						<i class="icon-typescript fa-3x"></i>
-						<div class="skill-text">TypeScript</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-brands fa-node fa-3x"></i>
-						<div class="skill-text">Node.js</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-brands fa-react fa-3x"></i>
-						<div class="skill-text">React</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-brands fa-python fa-3x"></i>
-						<div class="skill-text">Python</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-brands fa-java fa-3x"></i>
-						<div class="skill-text">Java</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-solid fa-c fa-3x"></i>
-						<div class="skill-text">C / C++</div>
-					</div>
-					<div class="grid-item">
-						<i class="icon-mongodb fa-3x"></i>
-						<div class="skill-text">MongoDB</div>
-					</div>
-					<div class="grid-item">
-						<i class="fa-solid fa-database fa-3x"></i>
-						<div class="skill-text">MySQL</div>
-					</div>
-				</div>
-			</section>
-			<footer>
-				<a href="https://github.com/Moorad">
-					<button class="footer-icons">
-						<i class="fa-brands fa-github fa-lg"></i>
-					</button>
-				</a>
-				<a href="https://www.linkedin.com/in/moorad-altamimi-490ba9198/">
-					<button class="footer-icons">
-						<i class="fa-brands fa-linkedin-in fa-lg"></i>
-					</button>
-				</a>
-				<a href="mailto: mooradaltamimi@gmail.com">
-					<button class="footer-icons">
-						<i class="fa-solid fa-envelope fa-lg"></i>
-					</button>
-				</a>
-			</footer>
-			<div id="construction">
-				This website is under heavy construction.
-			</div>
-		</div> -->
     </main>
+    <div class="section-gap"></div>
+    <section>
+        <div class="title-lg">Timeline</div>
+        <div class="sub-title">
+            What am I doing currently and what important events occurred in the
+            past
+        </div>
+        <div class="section-gap"></div>
+        <div>
+            <TimelineItem
+                title="MsC at X University"
+                description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
+                imgSrc="/university_1.png"
+                buttonHref="https://www.sheffield.ac.uk/"
+                timePeriod="2023-2024"
+                reverseRow={false}
+            />
+            <TimelineItem
+                title="BsC at Swansea University"
+                description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
+                imgSrc="/university_2.png"
+                buttonHref="https://www.swansea.ac.uk/"
+                timePeriod="2019-2023"
+                reverseRow={true}
+            />
+            <TimelineItem
+                title="GCSE at Pentrehafod"
+                description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
+                imgSrc="/school_1.png"
+                buttonHref="https://pentrehafod.school/"
+                timePeriod="2016-2019"
+                reverseRow={false}
+            />
+        </div>
+    </section>
 </Layout>

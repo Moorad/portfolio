@@ -1,0 +1,35 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    imgSrc: string;
+    timePeriod: string;
+    buttonHref: string;
+    reverseRow?: boolean;
+}
+
+const {
+    title,
+    description,
+    imgSrc,
+    timePeriod,
+    buttonHref,
+    reverseRow = false,
+} = Astro.props;
+---
+
+<div class="timeline-item">
+    <div class={"timeline-text-container " + (reverseRow ? "reverse" : "")}>
+        <div class="time-period-pill">{timePeriod}</div>
+        <div class="timeline-title">{title}</div>
+        <div class="timeline-description">{description}</div>
+        <div class="timeline-button">
+            <a href={buttonHref} class="no-decoration">
+                <button class="primary">Visit website</button>
+            </a>
+        </div>
+    </div>
+    <div class="timeline-img-container">
+        <img src={imgSrc} alt="" />
+    </div>
+</div>
