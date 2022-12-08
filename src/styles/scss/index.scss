@@ -1,8 +1,38 @@
 @use 'variables' as v;
 @use 'base';
 
-.background {
-	background: radial-gradient(at top,#1A344B 0%, #1E1E2C 75%);
+body {
+	background: radial-gradient(100% 100vh at 50% 0%, #1A344B 0%, #1E1E2C 100%)
+}
+
+.hero-container {
+	position: relative;
+	min-height: 51rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	button {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.hero-inner-container {
+		width: 32rem;
+	}
+
+	.title-lg {
+		padding: 0.5rem 0;
+	}
+
+	.sub-title {
+		padding: 0.8rem 0 1.7rem 0;
+	}
+
+	.down-icon {
+		position: absolute;
+		bottom: 0;
+	}
 }
 
 .main-section {

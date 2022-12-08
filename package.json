@@ -9,7 +9,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"watch:sass": "sass --watch src/styles/scss:src/styles/css"
+		"watch:sass": "sass --no-source-map --watch src/styles/scss:src/styles/css"
 	},
 	"dependencies": {
 		"@astrojs/react": "^1.2.2",

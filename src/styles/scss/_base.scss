@@ -4,6 +4,7 @@ body, html {
 	margin: 0;
 	padding: 0;
 	color: white;
+	width: 100vw;
 	background-color: v.$base-background-color;
 	font-family: v.$main-font;
 }
@@ -12,7 +13,7 @@ body, html {
 	max-width: v.$main-container-width;
 	margin-right: auto;
 	margin-left: auto;
-	outline: 2px dashed red; 
+	// outline: 2px dashed red; 
 }
 
 .nav-outer-container {
@@ -22,6 +23,7 @@ body, html {
 .nav-container {
 	height: 4.4rem;
 	max-width: v.$main-container-width;
+	padding-top: 2rem;
 	margin-right: auto;
 	margin-left: auto;
 	
@@ -49,8 +51,75 @@ body, html {
 	
 		.nav-right {
 			margin-left: auto;
+			
+			button {
+				padding-right: 1.2rem;
+				padding-left: 1.2rem;
+			}
 		}
 
+	}
+}
+
+.title-lg {
+	font-weight: 700;
+	font-size: 48px;
+	text-align: center;
+	padding: 0.4rem 0rem;
+}
+
+.sub-title {
+	text-align: center;
+	padding: 0.4rem 0rem;
+	font-weight: 400;
+}
+
+button {
+	display: block;
+	border-radius: 0.4rem;
+	color: white;
+	padding: 0.6rem 1.5rem;
+	background-color: #121212;
+	font-size: 18px;
+	font-family: v.$main-font;
+	border: none;
+	
+	&:hover:not(:disabled) {
+		background-color: lighten(#121212, 5%);
+		cursor: pointer;
+	}
+
+	&:disabled {
+		background-color: rgba(v.$main-color, 0.3);
+		color: rgba(white, 0.3);
+	}
+
+	// &.active::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	height: 3px;
+		// 	width: 80%;
+		// 	right: 50%;
+		// 	bottom: calc(50% - 25px);
+		// 	transform: translate(50%, -50%);
+		// 	background-color: v.$main-color;
+		// 	border-radius: 6px;
+		// }
+	}
+
+.primary {
+	background-color: v.$main-color;
+
+	&:hover:not(:disabled) {
+		background-color: lighten(v.$main-color, 5%) !important;
+	}
+}
+	
+a {
+	color: lighten(v.$main-color, 20%);
+	
+	&.no-underline {
+		text-decoration: none;	
 	}
 }
 
@@ -60,59 +129,6 @@ body, html {
 		background-color: rgba(18, 26, 30, 0.3);
 		backdrop-filter: blur(8px);
 	}
-}
-
-.nav-bar {
-	position: fixed;
-	margin: 0;
-	width: 100%;
-	height: v.$nav-height;
-	top:0;
-	right: 0;
-	z-index: 100;
-	
-	.nav-item {
-		position: relative;
-		display: block;
-		float: right;
-		margin: v.$nav-item-margin;
-		padding: v.$nav-item-size;
-		border-radius: 0.5rem;
-	
-		&:hover {
-			background-color: rgba(#000, 0.2);
-		}
-
-		&.active::after {
-			content: '';
-			position: absolute;
-			height: 3px;
-			width: 80%;
-			right: 50%;
-			bottom: calc(50% - 25px);
-			transform: translate(50%, -50%);
-			background-color: v.$main-color;
-			border-radius: 6px;
-		}
-	}
-
-	.brand {
-		display: block;
-		float:left;
-		margin: v.$nav-item-margin;	
-		font-weight: 900;
-		font-size: 1.5rem;
-		
-	}
-
-	a {
-		color: white;
-	}
-
-	i {
-		margin-left: 8px;
-	}
-
 }
 
 .nav-bar-scroll {
@@ -165,47 +181,6 @@ span {
 
 // Button types
 
-// default
-button {
-	border-radius: 0.5rem;
-	// padding: v.$nav-item-size;
-	
-	padding: 0.8em 1.2em;
-	border-radius: 0.5em;
-	color: white;
-	background: none;
-	border: none;
-	font-family: v.$main-font;
-	min-width: 5em;
-	position: relative;
-	
-	&:hover:not(:disabled) {
-		background-color: rgba(#000, 0.2);
-		cursor: pointer;
-	}
-
-	&:disabled {
-		background-color: rgba(v.$main-color, 0.3);
-		color: rgba(white, 0.3);
-	}
-
-	&.active::after {
-		content: '';
-		position: absolute;
-		height: 3px;
-		width: 80%;
-		right: 50%;
-		bottom: calc(50% - 25px);
-		transform: translate(50%, -50%);
-		background-color: v.$main-color;
-		border-radius: 6px;
-	}
-}
-
-.primary {
-	background: v.$main-color ;
-}
-
 .outline-primary {
 	border: 2px solid v.$main-color;
 	background-color: rgba(v.$main-color, 0.3);
@@ -213,10 +188,6 @@ button {
 
 .hidden {
 	display: none;
-}
-
-a {
-	color: lighten(v.$main-color, 20%);
 }
 
 .tooltip {

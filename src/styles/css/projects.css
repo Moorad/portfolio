@@ -2,20 +2,21 @@ body, html {
   margin: 0;
   padding: 0;
   color: white;
+  width: 100vw;
   background-color: #1E1E2C;
-  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
 }
 
 .main-container {
   max-width: 81rem;
   margin-right: auto;
   margin-left: auto;
-  outline: 2px dashed red;
 }
 
 .nav-container {
   height: 4.4rem;
   max-width: 81rem;
+  padding-top: 2rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -42,6 +43,56 @@ body, html {
 .nav-container .nav-inner-container .nav-right {
   margin-left: auto;
 }
+.nav-container .nav-inner-container .nav-right button {
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.title-lg {
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  padding: 0.4rem 0rem;
+}
+
+.sub-title {
+  text-align: center;
+  padding: 0.4rem 0rem;
+  font-weight: 400;
+}
+
+button {
+  display: block;
+  border-radius: 0.4rem;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  background-color: #121212;
+  font-size: 18px;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  border: none;
+}
+button:hover:not(:disabled) {
+  background-color: #1f1f1f;
+  cursor: pointer;
+}
+button:disabled {
+  background-color: rgba(62, 95, 231, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.primary {
+  background-color: #3E5FE7;
+}
+.primary:hover:not(:disabled) {
+  background-color: #5572ea !important;
+}
+
+a {
+  color: #99aaf2;
+}
+a.no-underline {
+  text-decoration: none;
+}
 
 @keyframes nav-scroll {
   from {
@@ -52,51 +103,6 @@ body, html {
     backdrop-filter: blur(8px);
   }
 }
-.nav-bar {
-  position: fixed;
-  margin: 0;
-  width: 100%;
-  height: 4rem;
-  top: 0;
-  right: 0;
-  z-index: 100;
-}
-.nav-bar .nav-item {
-  position: relative;
-  display: block;
-  float: right;
-  margin: 15px 10px;
-  padding: 0.5em 1.2em 0.5em 0.8em;
-  border-radius: 0.5rem;
-}
-.nav-bar .nav-item:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.nav-bar .nav-item.active::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 80%;
-  right: 50%;
-  bottom: calc(50% - 25px);
-  transform: translate(50%, -50%);
-  background-color: #3E5FE7;
-  border-radius: 6px;
-}
-.nav-bar .brand {
-  display: block;
-  float: left;
-  margin: 15px 10px;
-  font-weight: 900;
-  font-size: 1.5rem;
-}
-.nav-bar a {
-  color: white;
-}
-.nav-bar i {
-  margin-left: 8px;
-}
-
 .nav-bar-scroll {
   animation-name: nav-scroll;
   animation-duration: 0.5s;
@@ -137,41 +143,6 @@ span.whitespace-xs {
   margin-left: 4px;
 }
 
-button {
-  border-radius: 0.5rem;
-  padding: 0.8em 1.2em;
-  border-radius: 0.5em;
-  color: white;
-  background: none;
-  border: none;
-  font-family: Lato, Arial, Helvetica, sans-serif;
-  min-width: 5em;
-  position: relative;
-}
-button:hover:not(:disabled) {
-  background-color: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-button:disabled {
-  background-color: rgba(62, 95, 231, 0.3);
-  color: rgba(255, 255, 255, 0.3);
-}
-button.active::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 80%;
-  right: 50%;
-  bottom: calc(50% - 25px);
-  transform: translate(50%, -50%);
-  background-color: #3E5FE7;
-  border-radius: 6px;
-}
-
-.primary {
-  background: #3E5FE7;
-}
-
 .outline-primary {
   border: 2px solid #3E5FE7;
   background-color: rgba(62, 95, 231, 0.3);
@@ -179,10 +150,6 @@ button.active::after {
 
 .hidden {
   display: none;
-}
-
-a {
-  color: #99aaf2;
 }
 
 .tooltip {
@@ -290,5 +257,3 @@ a {
 .project-filter * {
   display: inline-block;
 }
-
-/*# sourceMappingURL=projects.css.map */

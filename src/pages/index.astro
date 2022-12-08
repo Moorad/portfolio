@@ -1,12 +1,26 @@
 ---
-import '../styles/css/index.css'
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import "../styles/css/index.css";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Home - Moorad's website">
-	<!-- <main>
-		<div class="main-container">
+    <main class="hero-container">
+        <div class="hero-inner-container">
+            <div class="title-lg">Hello!</div>
+            <div class="sub-title">
+                My name is Moorad Altamimi and I’m a full-stack web developer.
+                I’m currently a Computer Science undergraduate student but I do
+                web development in my free time.
+            </div>
+            <div>
+                <button class="primary">View Projects</button>
+            </div>
+        </div>
+        <div class="down-icon">
+            <i class="fa-solid fa-angle-down fa-3x"></i>
+        </div>
+        <!-- <div class="main-container">
 			<div class="background">
 				<canvas id="canvas"></canvas>
 			</div>
@@ -98,6 +112,6 @@ import Card from '../components/Card.astro';
 			<div id="construction">
 				This website is under heavy construction.
 			</div>
-		</div>
-	</main> -->
+		</div> -->
+    </main>
 </Layout>
