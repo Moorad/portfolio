@@ -1,4 +1,5 @@
 ---
+import "../styles/css/icomoon.css";
 import NavBar from "../components/NavBar.astro";
 export interface Props {
     title: string;
@@ -24,7 +25,6 @@ const { title, active } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/icomoon.css" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <title>{title}</title>
     </head>
