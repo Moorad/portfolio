@@ -3,6 +3,10 @@
 
 body {
     background: radial-gradient(100% 100vh at 50% 0%, #1a344b 0%, #1e1e2c 100%);
+    background-position-y: -60rem;
+    animation-name: graident-fade;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .hero-container {
@@ -132,5 +136,14 @@ body {
                 margin: auto 0;
             }
         }
+    }
+}
+
+@keyframes graident-fade {
+    from {
+        background-position-y: -60rem;
+    }
+    to {
+        background-position-y: 0rem;
     }
 }

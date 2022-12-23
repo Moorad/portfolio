@@ -1,8 +1,15 @@
 ---
+import IconWithTooltip from "./IconWithTooltip.astro";
+
+type Icon = {
+    className: string;
+    tooltip: string;
+};
+
 interface Props {
     title: string;
     description: string;
-    icons: string[];
+    icons: Icon[];
 }
 
 const { title, description, icons } = Astro.props;
@@ -12,6 +19,13 @@ const { title, description, icons } = Astro.props;
     <div class="skill-title">{title}</div>
     <div class="skill-description">{description}</div>
     <div class="skill-icons">
-        {icons.map((e) => <i class={e} />)}
+        {
+            icons.map((e) => (
+                <IconWithTooltip
+                    className={e.className}
+                    tooltipText={e.tooltip}
+                />
+            ))
+        }
     </div>
 </div>

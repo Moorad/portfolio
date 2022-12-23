@@ -1,7 +1,6 @@
 ---
 import "../styles/css/index.css";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 import SkillsItem from "../components/SkillsItem.astro";
 ---
@@ -70,44 +69,114 @@ import SkillsItem from "../components/SkillsItem.astro";
                 title="Web technologies and languages"
                 description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
                 icons={[
-                    "fa-brands fa-html5",
-                    "fa-brands fa-css3",
-                    "fa-brands fa-js",
-                    "icon-typescript",
-                    "fa-brands fa-node",
-                    "fa-brands fa-react",
+                    {
+                        className: "fa-brands fa-html5",
+                        tooltip: "HTML5",
+                    },
+                    {
+                        className: "fa-brands fa-css3",
+                        tooltip: "CSS3",
+                    },
+                    {
+                        className: "fa-brands fa-js",
+                        tooltip: "JavaScript",
+                    },
+                    {
+                        className: "icon-typescript",
+                        tooltip: "TypeScript",
+                    },
+                    {
+                        className: "fa-brands fa-node",
+                        tooltip: "Node.js",
+                    },
+                    {
+                        className: "fa-brands fa-react",
+                        tooltip: "React",
+                    },
                 ]}
             />
             <SkillsItem
                 title="Other programming Languages"
                 description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
                 icons={[
-                    "fa-brands fa-php",
-                    "fa-brands fa-laravel",
-                    "fa-brands fa-python",
-                    "fa-brands fa-java",
-                    "fa-solid fa-c",
-                    "icon-haskell",
+                    {
+                        className: "fa-brands fa-php",
+                        tooltip: "PHP",
+                    },
+                    {
+                        className: "fa-brands fa-laravel",
+                        tooltip: "Laravel",
+                    },
+                    {
+                        className: "fa-brands fa-python",
+                        tooltip: "Python",
+                    },
+                    {
+                        className: "fa-brands fa-java",
+                        tooltip: "Java",
+                    },
+                    {
+                        className: "fa-solid fa-c",
+                        tooltip: "C / C++",
+                    },
+                    {
+                        className: "icon-haskell",
+                        tooltip: "Haskell",
+                    },
                 ]}
             />
             <SkillsItem
                 title="Databases"
                 description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
-                icons={["icon-mongodb", "icon-mysql", "icon-firebase"]}
+                icons={[
+                    {
+                        className: "icon-mongodb",
+                        tooltip: "MongoDB",
+                    },
+                    {
+                        className: "icon-mysql",
+                        tooltip: "MySQL",
+                    },
+                    {
+                        className: "icon-firebase",
+                        tooltip: "Firebase",
+                    },
+                ]}
             />
             <SkillsItem
                 title="API architecture"
                 description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
-                icons={["fa-solid fa-cogs", "icon-graphql"]}
+                icons={[
+                    {
+                        className: "fa-solid fa-cogs",
+                        tooltip: "REST API",
+                    },
+                    {
+                        className: "icon-graphql",
+                        tooltip: "GraphQL",
+                    },
+                ]}
             />
             <SkillsItem
                 title="Other software"
                 description="My name is Moorad Altamimi and I’m a full-stack web developer. I’m currently a Computer Science undergraduate student but I do web development in my free time."
                 icons={[
-                    "fa-brands fa-figma",
-                    "fa-brands fa-linux",
-                    "fa-brands fa-docker",
-                    "fa-brands fa-git",
+                    {
+                        className: "fa-brands fa-figma",
+                        tooltip: "Figma",
+                    },
+                    {
+                        className: "fa-brands fa-linux",
+                        tooltip: "Linux / Bash",
+                    },
+                    {
+                        className: "fa-brands fa-docker",
+                        tooltip: "Docker",
+                    },
+                    {
+                        className: "fa-brands fa-git",
+                        tooltip: "Git",
+                    },
                 ]}
             />
         </div>

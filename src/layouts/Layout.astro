@@ -1,6 +1,7 @@
 ---
 import "../styles/css/icomoon.css";
 import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
 export interface Props {
     title: string;
     active: number;
@@ -35,5 +36,6 @@ const { title, active } = Astro.props;
         <div class="main-container">
             <slot />
         </div>
+        <Footer />
     </body>
 </html>

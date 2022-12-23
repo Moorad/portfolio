@@ -71,6 +71,27 @@ html {
   padding-left: 1.2rem;
 }
 
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(236, 252, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.footer .footer-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+.footer .footer-icons i {
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+.footer .footer-icons i:hover {
+  background-color: rgba(18, 18, 18, 0.5);
+}
+
 .nav-scroll {
   padding-top: 0;
   background-color: rgba(236, 252, 255, 0.08);
@@ -159,8 +180,46 @@ span.whitespace-xs {
   margin-left: 4px;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltip-text {
+  visibility: hidden;
+  font-weight: 400;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 7px 14px;
+  border-radius: 6px;
+  width: max-content;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
 body {
   background: radial-gradient(100% 100vh at 50% 0%, #1a344b 0%, #1e1e2c 100%);
+  background-position-y: -60rem;
+  animation-name: graident-fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .hero-container {
@@ -270,4 +329,13 @@ body {
 .skills-container .skills-item .skill-icons [class*=" icon-"] {
   font-size: 34px;
   margin: auto 0;
+}
+
+@keyframes graident-fade {
+  from {
+    background-position-y: -60rem;
+  }
+  to {
+    background-position-y: 0rem;
+  }
 }
