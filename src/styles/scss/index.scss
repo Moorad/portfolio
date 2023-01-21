@@ -105,20 +105,11 @@ body {
     }
 }
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5rem;
-    .skills-item {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-        width: 30rem;
-
+.structured-container {
+    .structured-item {
         padding: 0 2rem;
-
+        text-align: center;
+        gap: 1rem;
         .skill-title {
             font-size: 32px;
             font-weight: 700;
@@ -137,14 +128,5 @@ body {
                 margin: auto 0;
             }
         }
-    }
-}
-
-@keyframes graident-fade {
-    from {
-        background-position-y: -60rem;
-    }
-    to {
-        background-position-y: 0rem;
     }
 }

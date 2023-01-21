@@ -261,3 +261,25 @@ span {
 .highlight {
     color: lighten(v.$main-color, 20);
 }
+
+@keyframes graident-fade {
+    from {
+        background-position-y: -60rem;
+    }
+    to {
+        background-position-y: 0rem;
+    }
+}
+
+.structured-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    .structured-item {
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        overflow: hidden;
+    }
+}

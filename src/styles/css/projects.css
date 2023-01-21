@@ -232,64 +232,58 @@ span.whitespace-xs {
   color: #99aaf2;
 }
 
-.background {
-  background: radial-gradient(at top, #1A344B 0%, #1E1E2C 75%);
+@keyframes graident-fade {
+  from {
+    background-position-y: -60rem;
+  }
+  to {
+    background-position-y: 0rem;
+  }
+}
+.structured-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+.structured-container .structured-item {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  overflow: hidden;
 }
 
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.5em;
-  padding: 2em;
-}
-.projects-container .projects-item {
-  border-radius: 1em;
-  width: 300px;
-}
-.projects-container .projects-item .project-img {
-  border-radius: 0.5em;
-  width: 100%;
-}
-.projects-container .projects-item .project-name {
-  font-weight: 900;
-  font-size: 1.5em;
-  text-align: center;
-  margin: 15px 0;
-}
-.projects-container .projects-item .project-description {
-  text-align: center;
-  margin: 15px 0;
-}
-.projects-container .projects-item .project-buttons, .projects-container .projects-item .project-langs {
-  margin: 15px 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.projects-container .projects-item .project-langs .lang {
-  padding: 0.8em;
-  border-radius: 0.5em;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.projects-container .projects-item .project-tags {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-.projects-container .projects-item .project-tags .tag {
-  padding: 0.2em 0.8em;
-  border-radius: 1em;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.projects-container .projects-item .project-tags .tag.highlight {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.2);
+body {
+  position: relative;
+  background: radial-gradient(100% 100vh at 100% 0%, #1a344b 0%, #1e1e2c 100%);
+  background-position-y: -60rem;
+  animation-name: graident-fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
-.project-filter * {
-  display: inline-block;
+.filter-container {
+  margin: 20px 0;
+}
+.filter-container .filter-title {
+  font-size: 21px;
+}
+
+.structured-container .structured-item {
+  background-color: rgba(236, 252, 255, 0.1);
+  border: 2px solid rgba(236, 252, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  width: 33.5rem;
+}
+.structured-container .structured-item .inner-project-item {
+  padding: 0rem 2rem 1rem 2rem;
+}
+.structured-container .structured-item .project-thumbnail {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.structured-container .structured-item .project-title {
+  font-size: 34px;
 }

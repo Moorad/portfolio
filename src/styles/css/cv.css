@@ -232,6 +232,27 @@ span.whitespace-xs {
   color: #99aaf2;
 }
 
+@keyframes graident-fade {
+  from {
+    background-position-y: -60rem;
+  }
+  to {
+    background-position-y: 0rem;
+  }
+}
+.structured-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+.structured-container .structured-item {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  overflow: hidden;
+}
+
 .background {
   background: radial-gradient(at top, #1A344B 0%, #1E1E2C 75%);
 }
