@@ -2,6 +2,7 @@
 @use "base";
 
 body {
+    position: relative;
     background: radial-gradient(100% 100vh at 50% 0%, #1a344b 0%, #1e1e2c 100%);
     background-position-y: -60rem;
     animation-name: graident-fade;

@@ -1,3 +1,7 @@
+* {
+  z-index: 1;
+}
+
 body,
 html {
   margin: 0;
@@ -214,7 +218,22 @@ span.whitespace-xs {
   visibility: visible;
 }
 
+.bottom-background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+.bottom-background img {
+  width: 100%;
+}
+
+.highlight {
+  color: #99aaf2;
+}
+
 body {
+  position: relative;
   background: radial-gradient(100% 100vh at 50% 0%, #1a344b 0%, #1e1e2c 100%);
   background-position-y: -60rem;
   animation-name: graident-fade;

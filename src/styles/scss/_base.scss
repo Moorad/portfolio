@@ -1,5 +1,9 @@
 @use "variables" as v;
 
+* {
+    z-index: 1;
+}
+
 body,
 html {
     margin: 0;
@@ -242,4 +246,18 @@ span {
     &:hover .tooltip-text {
         visibility: visible;
     }
+}
+
+.bottom-background {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    img {
+        width: 100%;
+    }
+}
+
+.highlight {
+    color: lighten(v.$main-color, 20);
 }
