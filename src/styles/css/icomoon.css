@@ -1,63 +1,66 @@
 @font-face {
-    font-family: "icomoon";
-    src: url("/fonts/icomoon.eot?sm6ifq");
-    src: url("/fonts/icomoon.eot?sm6ifq#iefix") format("embedded-opentype"),
-        url("/fonts/icomoon.ttf?sm6ifq") format("truetype"),
-        url("/fonts/icomoon.woff?sm6ifq") format("woff"),
-        url("/fonts/icomoon.svg?sm6ifq#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?khw1i3');
+  src:  url('fonts/icomoon.eot?khw1i3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?khw1i3') format('truetype'),
+    url('fonts/icomoon.woff?khw1i3') format('woff'),
+    url('fonts/icomoon.svg?khw1i3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "icomoon" !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-next-js:before {
+  content: "\e909";
+}
+.icon-kotlin:before {
+  content: "\e90c";
+}
+.icon-tailwindcss:before {
+  content: "\e90a";
+}
+.icon-redux:before {
+  content: "\e90b";
+}
 .icon-graphql:before {
-    content: "\e906";
+  content: "\e906";
 }
-
 .icon-mysql:before {
-    content: "\e907";
+  content: "\e907";
 }
-
 .icon-haskell:before {
-    content: "\e908";
+  content: "\e908";
 }
-
 .icon-firebase:before {
-    content: "\e900";
+  content: "\e900";
 }
-
 .icon-googlecolab:before {
-    content: "\e901";
+  content: "\e901";
 }
-
 .icon-heroku:before {
-    content: "\e902";
+  content: "\e902";
 }
-
 .icon-mongodb:before {
-    content: "\e903";
+  content: "\e903";
 }
-
 .icon-tensorflow:before {
-    content: "\e904";
+  content: "\e904";
 }
-
 .icon-typescript:before {
-    content: "\e905";
+  content: "\e905";
 }

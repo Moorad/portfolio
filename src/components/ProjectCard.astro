@@ -1,24 +1,51 @@
 ---
-// export interface Props {
-//     title: string;
-//     body: string;
-//     href: string;
-// }
+import IconWithTooltip from "./IconWithTooltip.astro";
 
-// const { href, title, body } = Astro.props;
+type buttonObject = {
+    label: string;
+    href: string;
+};
+
+type iconObject = {
+    class_name: string;
+    tooltip: string;
+};
+
+interface Props {
+    title: string;
+    label: string;
+    description: string;
+    buttons: buttonObject[];
+    icons: iconObject[];
+    image: string;
+}
+
+const { title, label, description, buttons, icons, image } = Astro.props;
 ---
 
 <div class="structured-item">
-    <img class="project-thumbnail" src="portfolio.png" alt="" />
+    <img class="project-thumbnail" src={image} alt="" />
     <div class="inner-project-item">
-        <div class="project-title">Project title</div>
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            porttitor risus non urna laoreet rhoncus. Orci varius natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        <div class="project-title">{title}</div>
+        <div>{description}</div>
+        <div class="project-icons">
+            {
+                icons.map((icon) => (
+                    <IconWithTooltip
+                        className={icon.class_name}
+                        tooltipText={icon.tooltip}
+                    />
+                ))
+            }
         </div>
-        <div>Project button</div>
-        <div>Project icons</div>
-        <div>Project tags</div>
+        <div class="project-buttons">
+            {
+                buttons.map((btn) => (
+                    <a class="no-decoration" href={btn.href} target="_blank">
+                        <button class="primary">{btn.label}</button>
+                    </a>
+                ))
+            }
+        </div>
     </div>
 </div>

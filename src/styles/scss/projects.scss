@@ -39,7 +39,29 @@ body {
         }
 
         .project-title {
-            font-size: 34px;
+            font-size: 27px;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+        .project-icons {
+            padding: 1.5rem 0 2rem 0;
+            display: flex;
+            justify-content: center;
+            font-size: 40px;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            [class^="icon-"],
+            [class*=" icon-"] {
+                font-size: 34px;
+                margin: auto 0;
+            }
+        }
+
+        .project-buttons {
+            display: flex;
+            position: relative;
+            gap: 0.5rem;
         }
     }
 }

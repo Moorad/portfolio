@@ -1,7 +1,10 @@
 ---
 import "../styles/css/projects.css";
+import projects from "../data/projects.json";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+
+console.log(projects);
 ---
 
 <Layout title={"Projects - Moorad's website"} active={1}>
@@ -17,13 +20,18 @@ import ProjectCard from "../components/ProjectCard.astro";
             <div>Category filter here</div>
         </div>
         <div class="structured-container">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {
+                projects.data.map((item) => (
+                    <ProjectCard
+                        title={item.title}
+                        label={item.label}
+                        description={item.description}
+                        buttons={item.buttons}
+                        icons={item.icons}
+                        image={item.image}
+                    />
+                ))
+            }
         </div>
     </section>
 </Layout>

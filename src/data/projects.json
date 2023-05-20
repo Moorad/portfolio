@@ -1,0 +1,132 @@
+{
+	"data": [
+		{
+			"title": "Social network for education",
+			"label": "Graduation project",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"buttons": [
+				{
+					"label": "Visit website",
+					"href": "http://144.21.63.108:3000/"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/Moorad/cs-project"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "icon-typescript",
+					"tooltip": "TypeScript"
+				},
+				{
+					"class_name": "icon-next-js",
+					"tooltip": "Next.js"
+				},
+				{
+					"class_name": "fa-brands fa-react",
+					"tooltip": "React"
+				},
+				{
+					"class_name": "fa-brands fa-python",
+					"tooltip": "Python"
+				},
+				{
+					"class_name": "fa-brands fa-node",
+					"tooltip": "Node.js"
+				},
+				{
+					"class_name": "icon-mongodb",
+					"tooltip": "MongoDB"
+				}
+			],
+			"image": "/portfolio.png"
+		},
+		{
+			"title": "Rats Game",
+			"label": "Coursework",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"buttons": [
+				{
+					"label": "Download JAR",
+					"href": "http://144.21.63.108:3000/"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/iamblazer/cs230-rats"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "fa-brands fa-java",
+					"tooltip": "Java"
+				}
+			],
+			"image": "/portfolio.png"
+		},
+		{
+			"title": "Announcement Manager",
+			"label": "Coursework",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"buttons": [
+				{
+					"label": "Visit website",
+					"href": "http://144.21.63.108:3000/"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/Moorad/cs-project"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "fa-brands fa-php",
+					"tooltip": "PHP"
+				},
+				{
+					"class_name": "fa-brands fa-laravel",
+					"tooltip": "Laravel"
+				},
+				{
+					"class_name": "icon-tailwindcss",
+					"tooltip": "TailwindCSS"
+				},
+				{
+					"class_name": "icon-mysql",
+					"tooltip": "MySQL"
+				}
+			],
+			"image": "/portfolio.png"
+		},
+		{
+			"title": "Mobile Museum Companion",
+			"label": "Coursework",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"buttons": [
+				{
+					"label": "Download APK",
+					"href": "http://144.21.63.108:3000/"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/Moorad/cs-project"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "icon-kotlin",
+					"tooltip": "Kotlin"
+				},
+				{
+					"class_name": "fa-brands fa-android",
+					"tooltip": "Android"
+				},
+				{
+					"class_name": "icon-firebase",
+					"tooltip": "Firebase"
+				}
+			],
+			"image": "/portfolio.png"
+		}
+	]
+}
