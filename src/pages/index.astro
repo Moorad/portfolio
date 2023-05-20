@@ -1,5 +1,6 @@
 ---
 import "../styles/css/index.css";
+import timeline from "../data/timeline.json";
 import Layout from "../layouts/Layout.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 import SkillsItem from "../components/SkillsItem.astro";
@@ -32,30 +33,18 @@ import SkillsItem from "../components/SkillsItem.astro";
         </div>
         <div class="section-gap"></div>
         <div>
-            <TimelineItem
-                title="MsC at X University"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                imgSrc="/university_1.png"
-                buttonHref="https://www.sheffield.ac.uk/"
-                timePeriod="2023-2024"
-                reverseRow={false}
-            />
-            <TimelineItem
-                title="BsC at Swansea University"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                imgSrc="/university_2.png"
-                buttonHref="https://www.swansea.ac.uk/"
-                timePeriod="2019-2023"
-                reverseRow={true}
-            />
-            <TimelineItem
-                title="GCSE at Pentrehafod"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                imgSrc="/school_1.png"
-                buttonHref="https://pentrehafod.school/"
-                timePeriod="2016-2019"
-                reverseRow={false}
-            />
+            {
+                timeline.data.map((item, i) => (
+                    <TimelineItem
+                        title={item.title}
+                        description={item.description}
+                        imgSrc={item.image}
+                        buttonHref={item.website}
+                        timePeriod={`${item.date_range[0]}-${item.date_range[1]}`}
+                        reverseRow={i % 2 == 1}
+                    />
+                ))
+            }
         </div>
     </section>
     <section>

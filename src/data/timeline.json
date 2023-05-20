@@ -1,0 +1,24 @@
+{
+	"data": [
+		{
+			"title": "BsC at Swansea University",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"website": "https://swansea.ac.uk",
+			"date_range": [
+				"2019",
+				"2023 (Current)"
+			],
+			"image": "/university_2.png"
+		},
+		{
+			"title": "GCSE at Pentrehafod",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"website": "https://pentrehafod.school/",
+			"date_range": [
+				"2016",
+				"2019"
+			],
+			"image": "/school_1.png"
+		}
+	]
+}
