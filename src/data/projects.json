@@ -3,7 +3,7 @@
 		{
 			"title": "Social network for education",
 			"label": "Graduation project",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"description": "A social network designed for education and sharing learning material. It includes a powerful post editor, realtime communication tools and a simple recommendation system. This was my <span class='highlight'>*final year project*</span> at Swansea University.",
 			"buttons": [
 				{
 					"label": "Visit website",
@@ -45,11 +45,11 @@
 		{
 			"title": "Rats Game",
 			"label": "Coursework",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"description": "A clone of the game <a href='https://archive.org/details/swizzle_demu_RAT_201703'>Rats! by Sean O'Connor</a> that was released in 1996. The premise of the game is to kill all the rats using items before they reproduce and over run the maze. This was a group coursework and was developed by <span class='highlight'>*me and 6 other students*</span>.",
 			"buttons": [
 				{
 					"label": "Download JAR",
-					"href": "http://144.21.63.108:3000/"
+					"href": ""
 				},
 				{
 					"label": "Source code",
@@ -62,7 +62,7 @@
 					"tooltip": "Java"
 				}
 			],
-			"image": "/portfolio.png"
+			"image": "/rat_game.png"
 		},
 		{
 			"title": "Announcement Manager",
@@ -124,6 +124,66 @@
 				{
 					"class_name": "icon-firebase",
 					"tooltip": "Firebase"
+				}
+			],
+			"image": "/portfolio.png"
+		},
+		{
+			"title": "Portfolio website",
+			"label": "Coursework",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"buttons": [
+				{
+					"label": "Visit website",
+					"href": "http://moorad.dev"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/Moorad/portfolio"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "icon-astro",
+					"tooltip": "Astro"
+				},
+				{
+					"class_name": "icon-typescript",
+					"tooltip": "TypeScript"
+				},
+				{
+					"class_name": "fa-brands fa-sass",
+					"tooltip": "Sass"
+				}
+			],
+			"image": "/portfolio.png"
+		},
+		{
+			"title": "Fast image editor",
+			"label": "Coursework",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"buttons": [
+				{
+					"label": "Visit website",
+					"href": "http://144.21.63.108:3000/"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/Moorad/cs-project"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "fa-brands fa-react",
+					"tooltip": "React"
+				},
+				{
+					"class_name": "icon-typescript",
+					"tooltip": "TypeScript"
+				},
+				{
+					"class_name": "fa-brands fa-rust",
+					"tooltip": "Rust"
 				}
 			],
 			"image": "/portfolio.png"

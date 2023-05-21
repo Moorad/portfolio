@@ -4,6 +4,8 @@ import IconWithTooltip from "./IconWithTooltip.astro";
 type buttonObject = {
     label: string;
     href: string;
+    disabled?: boolean;
+    reason?: boolean;
 };
 
 type iconObject = {
@@ -27,7 +29,7 @@ const { title, label, description, buttons, icons, image } = Astro.props;
     <img class="project-thumbnail" src={image} alt="" />
     <div class="inner-project-item">
         <div class="project-title">{title}</div>
-        <div>{description}</div>
+        <div set:html={description} />
         <div class="project-icons">
             {
                 icons.map((icon) => (
@@ -40,11 +42,21 @@ const { title, label, description, buttons, icons, image } = Astro.props;
         </div>
         <div class="project-buttons">
             {
-                buttons.map((btn) => (
-                    <a class="no-decoration" href={btn.href} target="_blank">
-                        <button class="primary">{btn.label}</button>
-                    </a>
-                ))
+                buttons.map((btn) =>
+                    btn.disabled ? (
+                        <button class="primary" disabled>
+                            {btn.label}
+                        </button>
+                    ) : (
+                        <a
+                            class="no-decoration"
+                            href={btn.href}
+                            target="_blank"
+                        >
+                            <button class="primary">{btn.label}</button>
+                        </a>
+                    )
+                )
             }
         </div>
     </div>
