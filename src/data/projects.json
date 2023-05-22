@@ -67,7 +67,7 @@
 		{
 			"title": "Announcement Manager",
 			"label": "Coursework",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"description": "A web application to manage announcements between managers and employees. Managers can manage and announcements in their organisation and employees can view and interact with the announcements.",
 			"buttons": [
 				{
 					"label": "Visit website",
@@ -75,7 +75,7 @@
 				},
 				{
 					"label": "Source code",
-					"href": "https://github.com/Moorad/cs-project"
+					"href": "https://github.com/Moorad/announcement-manager"
 				}
 			],
 			"icons": [
@@ -101,7 +101,7 @@
 		{
 			"title": "Mobile Museum Companion",
 			"label": "Coursework",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"description": "A companion app for museums where people can select the museum that they physically and learn about the different artefacts available. Users can suggest new artefacts and curators (admins) can approve or deny the submissions.",
 			"buttons": [
 				{
 					"label": "Download APK",
@@ -109,7 +109,7 @@
 				},
 				{
 					"label": "Source code",
-					"href": "https://github.com/Moorad/cs-project"
+					"href": "https://github.com/Moorad/museum-companion"
 				}
 			],
 			"icons": [
@@ -131,7 +131,7 @@
 		{
 			"title": "Portfolio website",
 			"label": "Coursework",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"description": "A website to showcase my work outline my skills and details about me. The website additionally provides links for ways to get in touch with me. <span class='highlight'>*This is the website you are viewing currently*</span>",
 			"buttons": [
 				{
 					"label": "Visit website",
@@ -160,8 +160,8 @@
 		},
 		{
 			"title": "Fast image editor",
-			"label": "Coursework",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"label": "Personal",
+			"description": "A fast and efficent web-based image editor that uses <span class='highlight'>*Rust*</span> (WebAssembly) for fast image manipulation performance. The editor offers a range of features, including resizing, cropping, blurring, sharpening, edge detection, and more.",
 			"buttons": [
 				{
 					"label": "Visit website",
@@ -169,7 +169,7 @@
 				},
 				{
 					"label": "Source code",
-					"href": "https://github.com/Moorad/cs-project"
+					"href": "https://github.com/Moorad/fast-image-editor"
 				}
 			],
 			"icons": [
