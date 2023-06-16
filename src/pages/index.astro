@@ -7,168 +7,168 @@ import SkillsItem from "../components/SkillsItem.astro";
 ---
 
 <Layout title="Home - Moorad's website" active={0}>
-    <main class="hero-container">
-        <div class="hero-inner-container">
-            <div class="title-lg">Hello!</div>
-            <div class="sub-title">
-                My name is Moorad Altamimi and I’m a
-                <span class="highlight"> *full-stack web*</span> developer. I’m currently
-                a Computer Science undergraduate student but I do web development
-                in my free time.
-            </div>
-            <div>
-                <button class="primary">View Projects</button>
-            </div>
-        </div>
-        <div class="down-icon">
-            <i class="fa-solid fa-angle-down fa-3x"></i>
-        </div>
-    </main>
-    <div class="section-gap"></div>
-    <section>
-        <div class="title-lg">Timeline</div>
-        <div class="sub-title">
-            What am I doing currently and what important events occurred in the
-            past
-        </div>
-        <div class="section-gap"></div>
-        <div>
-            {
-                timeline.data.map((item, i) => (
-                    <TimelineItem
-                        title={item.title}
-                        description={item.description}
-                        imgSrc={item.image}
-                        buttonHref={item.website}
-                        timePeriod={`${item.date_range[0]}-${item.date_range[1]}`}
-                        reverseRow={i % 2 == 1}
-                    />
-                ))
-            }
-        </div>
-    </section>
-    <section>
-        <div class="title-lg">Skills</div>
-        <div class="sub-title">
-            What am I doing currently and what important events occurred in the
-            past
-        </div>
-        <div class="section-gap"></div>
-        <div class="structured-container">
-            <SkillsItem
-                title="Web technologies and languages"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                icons={[
-                    {
-                        className: "fa-brands fa-html5",
-                        tooltip: "HTML5",
-                    },
-                    {
-                        className: "fa-brands fa-css3",
-                        tooltip: "CSS3",
-                    },
-                    {
-                        className: "fa-brands fa-js",
-                        tooltip: "JavaScript",
-                    },
-                    {
-                        className: "icon-typescript",
-                        tooltip: "TypeScript",
-                    },
-                    {
-                        className: "fa-brands fa-node",
-                        tooltip: "Node.js",
-                    },
-                    {
-                        className: "fa-brands fa-react",
-                        tooltip: "React",
-                    },
-                ]}
-            />
-            <SkillsItem
-                title="Other programming languages"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                icons={[
-                    {
-                        className: "fa-brands fa-php",
-                        tooltip: "PHP",
-                    },
-                    {
-                        className: "fa-brands fa-laravel",
-                        tooltip: "Laravel",
-                    },
-                    {
-                        className: "fa-brands fa-python",
-                        tooltip: "Python",
-                    },
-                    {
-                        className: "fa-brands fa-java",
-                        tooltip: "Java",
-                    },
-                    {
-                        className: "fa-solid fa-c",
-                        tooltip: "C / C++",
-                    },
-                    {
-                        className: "icon-haskell",
-                        tooltip: "Haskell",
-                    },
-                ]}
-            />
-            <SkillsItem
-                title="Databases"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                icons={[
-                    {
-                        className: "icon-mongodb",
-                        tooltip: "MongoDB",
-                    },
-                    {
-                        className: "icon-mysql",
-                        tooltip: "MySQL",
-                    },
-                    {
-                        className: "icon-firebase",
-                        tooltip: "Firebase",
-                    },
-                ]}
-            />
-            <SkillsItem
-                title="API architecture"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                icons={[
-                    {
-                        className: "fa-solid fa-cogs",
-                        tooltip: "REST API",
-                    },
-                    {
-                        className: "icon-graphql",
-                        tooltip: "GraphQL",
-                    },
-                ]}
-            />
-            <SkillsItem
-                title="Other software"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor risus non urna laoreet rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                icons={[
-                    {
-                        className: "fa-brands fa-figma",
-                        tooltip: "Figma",
-                    },
-                    {
-                        className: "fa-brands fa-linux",
-                        tooltip: "Linux / Bash",
-                    },
-                    {
-                        className: "fa-brands fa-docker",
-                        tooltip: "Docker",
-                    },
-                    {
-                        className: "fa-brands fa-git",
-                        tooltip: "Git",
-                    },
-                ]}
-            />
-        </div>
-    </section>
+	<main class="hero-container">
+		<div class="hero-inner-container">
+			<div class="title-lg">Hello!</div>
+			<div class="sub-title">
+				My name is Moorad Altamimi and I’m a
+				<span class="highlight"> *full-stack web*</span> developer. I’m currently
+				a Computer Science undergraduate student but I do web development
+				in my free time.
+			</div>
+			<div>
+				<button class="primary">View Projects</button>
+			</div>
+		</div>
+		<div class="down-icon">
+			<i class="fa-solid fa-angle-down fa-3x"></i>
+		</div>
+	</main>
+	<div class="section-gap"></div>
+	<section>
+		<div class="title-lg">Timeline</div>
+		<div class="sub-title">
+			What am I doing currently and what important events occurred in the
+			past
+		</div>
+		<div class="section-gap"></div>
+		<div>
+			{
+				timeline.data.map((item, i) => (
+					<TimelineItem
+						title={item.title}
+						description={item.description}
+						imgSrc={item.image}
+						buttonHref={item.website}
+						timePeriod={`${item.date_range[0]}-${item.date_range[1]}`}
+						reverseRow={i % 2 == 1}
+					/>
+				))
+			}
+		</div>
+	</section>
+	<section>
+		<div class="title-lg">Skills</div>
+		<div class="sub-title">
+			What am I doing currently and what important events occurred in the
+			past
+		</div>
+		<div class="section-gap"></div>
+		<div class="structured-container">
+			<SkillsItem
+				title="Web technologies and languages"
+				description="Experienced with modern web technologies such as JavaScript and React. Such technologies allow for scalable web applications to be quickly and run smoothly."
+				icons={[
+					{
+						className: "fa-brands fa-html5",
+						tooltip: "HTML5",
+					},
+					{
+						className: "fa-brands fa-css3",
+						tooltip: "CSS3",
+					},
+					{
+						className: "fa-brands fa-js",
+						tooltip: "JavaScript",
+					},
+					{
+						className: "icon-typescript",
+						tooltip: "TypeScript",
+					},
+					{
+						className: "fa-brands fa-node",
+						tooltip: "Node.js",
+					},
+					{
+						className: "fa-brands fa-react",
+						tooltip: "React",
+					},
+				]}
+			/>
+			<SkillsItem
+				title="Other programming languages"
+				description="Familiar with other languages and frameworks like Android development with Kotlin, full-stack web applications with Laravel and PHP, and building general-purpose software using Java, C/C++, or Python."
+				icons={[
+					{
+						className: "fa-brands fa-php",
+						tooltip: "PHP",
+					},
+					{
+						className: "fa-brands fa-laravel",
+						tooltip: "Laravel",
+					},
+					{
+						className: "fa-brands fa-python",
+						tooltip: "Python",
+					},
+					{
+						className: "fa-brands fa-java",
+						tooltip: "Java",
+					},
+					{
+						className: "fa-solid fa-c",
+						tooltip: "C / C++",
+					},
+					{
+						className: "icon-haskell",
+						tooltip: "Haskell",
+					},
+				]}
+			/>
+			<SkillsItem
+				title="Databases"
+				description="Have used MongoDB and SQL databases in many projects. Additionally, have performed normalisation on SQL databases."
+				icons={[
+					{
+						className: "icon-mongodb",
+						tooltip: "MongoDB",
+					},
+					{
+						className: "icon-mysql",
+						tooltip: "MySQL",
+					},
+					{
+						className: "icon-firebase",
+						tooltip: "Firebase",
+					},
+				]}
+			/>
+			<SkillsItem
+				title="API architecture"
+				description="Can design and implement API architecture using traditional methods like REST and using modern, specialised architecture like GraphQL"
+				icons={[
+					{
+						className: "fa-solid fa-cogs",
+						tooltip: "REST API",
+					},
+					{
+						className: "icon-graphql",
+						tooltip: "GraphQL",
+					},
+				]}
+			/>
+			<SkillsItem
+				title="Other software"
+				description="Can use software that is commonly paired with software development including git for version control, figma for design mock-ups and Linux and docker for enhanced development and deployment experience"
+				icons={[
+					{
+						className: "fa-brands fa-figma",
+						tooltip: "Figma",
+					},
+					{
+						className: "fa-brands fa-linux",
+						tooltip: "Linux / Bash",
+					},
+					{
+						className: "fa-brands fa-docker",
+						tooltip: "Docker",
+					},
+					{
+						className: "fa-brands fa-git",
+						tooltip: "Git",
+					},
+				]}
+			/>
+		</div>
+	</section>
 </Layout>
