@@ -1,54 +1,53 @@
 ---
 interface Props {
-    active: number;
+	active: number;
 }
 
 const { active = 0 } = Astro.props;
 
 const pages = [
-    { name: "Home", href: "/", active: false },
-    { name: "Projects", href: "/projects", active: false },
-    { name: "CV", href: "/cv" },
-    { name: "Contact", href: "/contact", active: false },
+	{ name: "Home", href: "/", active: false },
+	{ name: "Projects", href: "/projects", active: false },
+	{ name: "Contact", href: "/contact", active: false },
 ];
 
 pages[active].active = true;
 ---
 
 <div class="nav-container">
-    <div class="nav-inner-container">
-        <div class="nav-logo">Mo.</div>
-        <div class="nav-items">
-            {
-                pages.map((e) => (
-                    <a href={e.href} class="no-decoration">
-                        <div class={e.active ? "active" : ""}>{e.name}</div>
-                    </a>
-                ))
-            }
-        </div>
-        <div class="nav-right">
-            <a href="https://github.com/Moorad" class="no-decoration">
-                <button>
-                    <i class="fa-brands fa-github fa-lg"></i>
-                    <span class="whitespace-sm"></span>
-                    Github
-                </button>
-            </a>
-        </div>
-    </div>
+	<div class="nav-inner-container">
+		<div class="nav-logo">Mo.</div>
+		<div class="nav-items">
+			{
+				pages.map((e) => (
+					<a href={e.href} class="no-decoration">
+						<div class={e.active ? "active" : ""}>{e.name}</div>
+					</a>
+				))
+			}
+		</div>
+		<div class="nav-right">
+			<a href="https://github.com/Moorad" class="no-decoration">
+				<button>
+					<i class="fa-brands fa-github fa-lg"></i>
+					<span class="whitespace-sm"></span>
+					Github
+				</button>
+			</a>
+		</div>
+	</div>
 </div>
 
 <script>
-    const navBar = document.getElementById("nav-bar");
+	const navBar = document.getElementById("nav-bar");
 
-    window.addEventListener("scroll", (e) => {
-        if (navBar) {
-            if (scrollY > 0) {
-                navBar.classList.add("nav-scroll");
-            } else {
-                navBar.classList.remove("nav-scroll");
-            }
-        }
-    });
+	window.addEventListener("scroll", (e) => {
+		if (navBar) {
+			if (scrollY > 0) {
+				navBar.classList.add("nav-scroll");
+			} else {
+				navBar.classList.remove("nav-scroll");
+			}
+		}
+	});
 </script>
