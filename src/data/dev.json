@@ -1,0 +1,68 @@
+{
+	"data": [
+		{
+			"title": "Fast image editor",
+			"label": "Personal",
+			"description": "A fast and efficent web-based image editor that uses <span class='highlight'>*Rust*</span> (WebAssembly) for fast image manipulation performance. The editor offers a range of features, including resizing, cropping, blurring, sharpening, edge detection, and more.",
+			"buttons": [
+				{
+					"label": "Visit website",
+					"href": "http://144.21.63.108:3000/"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/Moorad/fast-image-editor"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "fa-brands fa-react",
+					"tooltip": "React"
+				},
+				{
+					"class_name": "icon-typescript",
+					"tooltip": "TypeScript"
+				},
+				{
+					"class_name": "fa-brands fa-rust",
+					"tooltip": "Rust"
+				}
+			],
+			"image": "/placeholder.png"
+		},
+		{
+			"title": "Mobile photo editor",
+			"label": "personal",
+			"description": "A website to showcase my work outline my skills and details about me. The website additionally provides links for ways to get in touch with me. <span class='highlight'>*This is the website you are viewing currently*</span>",
+			"buttons": [
+				{
+					"label": "Visit website",
+					"href": "http://moorad.dev"
+				},
+				{
+					"label": "Source code",
+					"href": "https://github.com/Moorad/portfolio"
+				}
+			],
+			"icons": [
+				{
+					"class_name": "icon-expo",
+					"tooltip": "Expo"
+				},
+				{
+					"class_name": "fa-brands fa-react",
+					"tooltip": "React Native"
+				},
+				{
+					"class_name": "icon-typescript",
+					"tooltip": "TypeScript"
+				},
+				{
+					"class_name": "fa-brands fa-css3",
+					"tooltip": "CSS"
+				}
+			],
+			"image": "/placeholder.png"
+		}
+	]
+}

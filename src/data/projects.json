@@ -40,7 +40,7 @@
 					"tooltip": "MongoDB"
 				}
 			],
-			"image": "/portfolio.png"
+			"image": "/social_network.png"
 		},
 		{
 			"title": "Rats Game",
@@ -96,7 +96,7 @@
 					"tooltip": "MySQL"
 				}
 			],
-			"image": "/portfolio.png"
+			"image": "/announcement_board.png"
 		},
 		{
 			"title": "Mobile Museum Companion",
@@ -126,7 +126,7 @@
 					"tooltip": "Firebase"
 				}
 			],
-			"image": "/portfolio.png"
+			"image": "/museum_companion.png"
 		},
 		{
 			"title": "Portfolio website",
@@ -154,36 +154,6 @@
 				{
 					"class_name": "fa-brands fa-sass",
 					"tooltip": "Sass"
-				}
-			],
-			"image": "/portfolio.png"
-		},
-		{
-			"title": "Fast image editor",
-			"label": "Personal",
-			"description": "A fast and efficent web-based image editor that uses <span class='highlight'>*Rust*</span> (WebAssembly) for fast image manipulation performance. The editor offers a range of features, including resizing, cropping, blurring, sharpening, edge detection, and more.",
-			"buttons": [
-				{
-					"label": "Visit website",
-					"href": "http://144.21.63.108:3000/"
-				},
-				{
-					"label": "Source code",
-					"href": "https://github.com/Moorad/fast-image-editor"
-				}
-			],
-			"icons": [
-				{
-					"class_name": "fa-brands fa-react",
-					"tooltip": "React"
-				},
-				{
-					"class_name": "icon-typescript",
-					"tooltip": "TypeScript"
-				},
-				{
-					"class_name": "fa-brands fa-rust",
-					"tooltip": "Rust"
 				}
 			],
 			"image": "/portfolio.png"

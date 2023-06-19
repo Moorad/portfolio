@@ -6,30 +6,26 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title={"Projects - Moorad's website"} active={1}>
-    <section>
-        <div class="title-lg">Projects</div>
-        <div class="sub-title">Lorem</div>
-        <div class="filter-container">
-            <div class="filter-title">Technology</div>
-            <div>Technology filter here</div>
-        </div>
-        <div class="filter-container">
-            <div class="filter-title">Category</div>
-            <div>Category filter here</div>
-        </div>
-        <div class="structured-container">
-            {
-                projects.data.map((item) => (
-                    <ProjectCard
-                        title={item.title}
-                        label={item.label}
-                        description={item.description}
-                        buttons={item.buttons}
-                        icons={item.icons}
-                        image={item.image}
-                    />
-                ))
-            }
-        </div>
-    </section>
+	<section>
+		<div class="title-lg">Projects</div>
+		<div class="sub-title">
+			A list of projects that I have worked on in the past. The projects
+			displayed include personal and university assignments that have been
+			polished.
+		</div>
+		<div class="structured-container">
+			{
+				projects.data.map((item) => (
+					<ProjectCard
+						title={item.title}
+						label={item.label}
+						description={item.description}
+						buttons={item.buttons}
+						icons={item.icons}
+						image={item.image}
+					/>
+				))
+			}
+		</div>
+	</section>
 </Layout>

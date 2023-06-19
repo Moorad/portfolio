@@ -283,6 +283,7 @@ body {
 .structured-container .structured-item .project-thumbnail {
   height: 160px;
   object-fit: cover;
+  object-position: 0 0;
   border-radius: 12px;
 }
 .structured-container .structured-item .project-title {
