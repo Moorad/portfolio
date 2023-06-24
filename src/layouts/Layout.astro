@@ -14,6 +14,8 @@ if (active == 0) {
 	bottom_background += "_1";
 } else if (active == 1) {
 	//  bottom_background += "_2";
+} else if (active == 2) {
+	//  bottom_background += "_3";
 }
 
 bottom_background += ".png";
@@ -48,7 +50,12 @@ bottom_background += ".png";
 		<Footer />
 
 		<div class="bottom-background">
-			<img src={bottom_background} />
+			<img
+				src={bottom_background}
+				onerror="
+				this.style.display = 'none'
+				"
+			/>
 		</div>
 	</body>
 </html>

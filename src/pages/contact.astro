@@ -1,0 +1,16 @@
+---
+import "../styles/css/contact.css";
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<Layout title="Contact - Moorad's website" active={2}>
+	<section>
+		<div class="title-lg">Contact Form</div>
+		<div class="sub-title">
+			If you need to contact me please use the form below. I will get back
+			to you as soon as possible (within 2 days hopefully)
+		</div>
+		<ContactForm />
+	</section>
+</Layout>

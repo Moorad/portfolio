@@ -1,67 +1,66 @@
-@use 'variables' as v;
-@use 'base';
+@use "variables" as v;
+@use "base";
 
-.background {
-	background: radial-gradient(at top,#1A344B 0%, #1E1E2C 75%);
-}
+// body {
+//     position: relative;
+//     background: radial-gradient(
+//         100% 100vh at 100% 0%,
+//         #1a344b 0%,
+//         #1e1e2c 100%
+//     );
+//     background-position-y: -60rem;
+//     animation-name: graident-fade;
+//     animation-duration: 1.5s;
+//     animation-fill-mode: forwards;
+// }
 
 section {
-	height: calc(100vh - 12em);
-}
+    height: calc(100vh - 12em);
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
 
-form {
-	display: block;
-	width: 550px;
-	position: absolute;
-	top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	border: 3px solid white;
-	padding: 3rem;
-	border-radius: 0.5rem;
+    form {
+        label {
+            display: block;
+        }
 
+        input,
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            background-color: #2b3748;
+            border: 0;
+            color: white;
+            padding: 0.75rem 0.8rem;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 0.8rem;
+        }
 
-	.form-block {
-		margin-bottom: 1rem;
-		position: relative;
-		width: 100%;
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
 
-		label {
-			display: block;
-			margin: 5px;
-		}
+        .two-column {
+            display: flex;
+            gap: 2rem;
 
-		input, textarea {
-			box-sizing: border-box;
-			display: block;
-			margin: 0px;
-			width: 100%;
-			border-radius: 0.25em;
-			border: 2px solid #858585;
-			padding: 0.5rem;
+            div {
+                width: 50%;
+            }
+        }
 
-			&:focus {
-				outline-style: none;
-				box-shadow: none;
-				outline: 2px solid v.$main-color !important;
-			}
-		}
+        .submit-btn-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
 
-		textarea {
-			resize: vertical;
-			height: 120px;
-		}
-	}
-
-	.half-size {
-		width: 260px;
-		display: inline-block;
-		margin-right: 10px;
-		
-	}
-
-	.required:after {
-		content:" *";
-		color: rgb(255, 79, 79);
-	}
+        .required:after {
+            content: " *";
+            color: rgb(255, 79, 79);
+        }
+    }
 }
