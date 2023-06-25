@@ -1,17 +1,7 @@
 @use "base";
+@use "variables" as v;
 
-body {
-    position: relative;
-    background: radial-gradient(
-        100% 100vh at 100% 0%,
-        #1a344b 0%,
-        #1e1e2c 100%
-    );
-    background-position-y: -60rem;
-    animation-name: graident-fade;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-}
+@include v.animated_hero(100%, #1a344b 0%, #1e1e2c);
 
 .filter-container {
     margin: 20px 0;
@@ -63,6 +53,17 @@ body {
             display: flex;
             position: relative;
             gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .project-buttons {
+        flex-direction: column;
+
+        button {
+            width: 100%;
         }
     }
 }

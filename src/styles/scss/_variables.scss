@@ -1,9 +1,25 @@
-$main-color: #3E5FE7;
+$main-color: #3e5fe7;
 $main-font: Nunito, Arial, Helvetica, sans-serif;
-$base-background-color: #1E1E2C;
+$base-background-color: #1e1e2c;
 
 $main-container-width: 81rem;
 
 $nav-height: 4rem;
 $nav-item-margin: 15px 10px;
 $nav-item-size: 0.5em 1.2em 0.5em 0.8em;
+
+@mixin animated_hero($horizontal-pos, $grdnt-from, $grdnt-to) {
+    body {
+        position: relative;
+        background: radial-gradient(
+            100% 100vh at $horizontal-pos 0%,
+            $grdnt-from 0%,
+            $grdnt-to 100%
+        );
+        background-repeat: no-repeat;
+        background-position-y: -60rem;
+        animation-name: graident-fade;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+}

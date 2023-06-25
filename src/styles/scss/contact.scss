@@ -1,25 +1,15 @@
 @use "variables" as v;
 @use "base";
 
-// body {
-//     position: relative;
-//     background: radial-gradient(
-//         100% 100vh at 100% 0%,
-//         #1a344b 0%,
-//         #1e1e2c 100%
-//     );
-//     background-position-y: -60rem;
-//     animation-name: graident-fade;
-//     animation-duration: 1.5s;
-//     animation-fill-mode: forwards;
-// }
+@include v.animated_hero(0%, #1a344b 0%, #1e1e2c);
 
 section {
     height: calc(100vh - 12em);
     display: flex;
     flex-direction: column;
-    width: 500px;
+    max-width: 500px;
     margin: auto;
+    justify-content: center;
 
     form {
         label {
@@ -30,7 +20,7 @@ section {
         textarea {
             box-sizing: border-box;
             width: 100%;
-            background-color: #2b3748;
+            background-color: rgba(255, 255, 255, 0.06);
             border: 0;
             color: white;
             padding: 0.75rem 0.8rem;
@@ -50,6 +40,16 @@ section {
 
             div {
                 width: 50%;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .two-column {
+                display: block;
+
+                div {
+                    width: 100%;
+                }
             }
         }
 

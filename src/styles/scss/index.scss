@@ -1,14 +1,7 @@
 @use "variables" as v;
 @use "base";
 
-body {
-    position: relative;
-    background: radial-gradient(100% 100vh at 50% 0%, #1a344b 0%, #1e1e2c 100%);
-    background-position-y: -60rem;
-    animation-name: graident-fade;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-}
+@include v.animated_hero(50%, #1a344b 0%, #1e1e2c);
 
 .hero-container {
     position: relative;
@@ -88,7 +81,8 @@ body {
         align-items: center;
         width: 40%;
         img {
-            width: 80%;
+            max-width: 80%;
+            max-height: 125px;
         }
     }
 }
