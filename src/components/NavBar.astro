@@ -17,7 +17,7 @@ pages[active].active = true;
 <div class="nav-container">
 	<div class="nav-inner-container">
 		<div class="nav-logo">Mo.</div>
-		<div class="nav-items">
+		<div class="nav-items normal-menu">
 			{
 				pages.map((e) => (
 					<a href={e.href} class="no-decoration">
@@ -26,7 +26,7 @@ pages[active].active = true;
 				))
 			}
 		</div>
-		<div class="nav-right">
+		<div class="nav-right normal-menu">
 			<a href="https://github.com/Moorad" class="no-decoration">
 				<button>
 					<i class="fa-brands fa-github fa-lg"></i>
@@ -35,11 +35,36 @@ pages[active].active = true;
 				</button>
 			</a>
 		</div>
+		<div class="nav-right hamburger-menu">
+			<button class="hm-button">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</div>
+	</div>
+	<div class="hamburger-menu hamburger-menu-items hidden">
+		<div class="hm-button-close">
+			<button>
+				<i class="fa-solid fa-close"></i>
+			</button>
+		</div>
+		{
+			pages.map((e) => (
+				<a href={e.href} class="no-decoration">
+					<div class={"hm-menu-item " + (e.active ? "active" : "")}>
+						{e.name}
+					</div>
+				</a>
+			))
+		}
 	</div>
 </div>
 
 <script>
 	const navBar = document.getElementById("nav-bar");
+	const hmMenu = document.querySelector(".hamburger-menu-items");
+	const hmButton = document.querySelector(".hm-button");
+	const hmCloseButton = document.querySelector(".hm-button-close");
+	let hbMenuOpen = false;
 
 	window.addEventListener("scroll", (e) => {
 		if (navBar) {
@@ -50,4 +75,21 @@ pages[active].active = true;
 			}
 		}
 	});
+
+	hmButton?.addEventListener("click", () => {
+		hbMenuOpen = !hbMenuOpen;
+
+		if (hbMenuOpen) {
+			hmMenu?.classList.remove("hidden");
+		} else {
+			hmMenu?.classList.add("hidden");
+		}
+	});
+
+	hmCloseButton?.addEventListener("click", () => {
+		hbMenuOpen = false;
+		hmMenu?.classList.add("hidden");
+	});
+
+	console.log(hmButton);
 </script>

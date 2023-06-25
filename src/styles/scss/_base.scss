@@ -83,6 +83,44 @@ html {
             }
         }
     }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .hamburger-menu-items {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        background-color: #121212;
+        flex-direction: column;
+        padding-top: 3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+
+        .hm-button-close {
+            margin-left: auto;
+        }
+
+        .hm-menu-item {
+            padding: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .normal-menu {
+            display: none !important;
+        }
+
+        .hamburger-menu {
+            display: flex;
+        }
+    }
 }
 
 .footer {
@@ -128,6 +166,9 @@ html {
     line-height: 160%;
     padding: 0.4rem 0rem;
     font-weight: 400;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
@@ -282,4 +323,8 @@ span {
         width: 30rem;
         overflow: hidden;
     }
+}
+
+.hidden {
+    display: none !important ;
 }
