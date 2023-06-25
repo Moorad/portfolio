@@ -100,11 +100,11 @@ html {
         background-color: #121212;
         flex-direction: column;
         padding-top: 3rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
+        box-sizing: border-box;
 
         .hm-button-close {
             margin-left: auto;
+            margin-right: auto;
         }
 
         .hm-menu-item {

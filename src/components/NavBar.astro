@@ -42,11 +42,9 @@ pages[active].active = true;
 		</div>
 	</div>
 	<div class="hamburger-menu hamburger-menu-items hidden">
-		<div class="hm-button-close">
-			<button>
-				<i class="fa-solid fa-close"></i>
-			</button>
-		</div>
+		<button class="hm-button-close">
+			<i class="fa-solid fa-close"></i>
+		</button>
 		{
 			pages.map((e) => (
 				<a href={e.href} class="no-decoration">

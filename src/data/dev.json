@@ -1,5 +1,5 @@
 {
-	"data": [
+	"projects": [
 		{
 			"title": "Fast image editor",
 			"label": "Personal",
@@ -64,5 +64,15 @@
 			],
 			"image": "/placeholder.png"
 		}
-	]
+	],
+	"timeline": {
+		"title": "DXC Technology",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum enim eget interdum faucibus. Nam molestie in justo eget luctus. Curabitur aliquet tellus mauris, nec maximus est mollis eu. ",
+		"website": "https://dxc.com",
+		"date_range": [
+			"2023",
+			"Current"
+		],
+		"image": "/company_1.png"
+	}
 }
